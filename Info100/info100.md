@@ -6,3 +6,9 @@ INFO100 provided a basic introduction to Information and Communication Technolog
 * Basic information and communication technology including computer and software architecture, network and database, information system and user interface.
 * A societal perspective on ICT, issues involving privacy, ethics, vulnerability, security and ICT policy.
 * Examples of information science research, problems addressed by information science and information science research method.
+
+### Coriculum
+* Lawrence Snyder. Fluency With Information Technology. Skills, Concepts, & Capabilities. Sixth Edition (Global).
+* Luciano Floridi. Information. A Very Short Introduction.
+* Exercises
+* Lectures
