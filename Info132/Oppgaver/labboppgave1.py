@@ -22,6 +22,8 @@
 # kvinneandel = antall_kvinner/antall_studenter 
 # print('kvinneandelen er ', kvinneandel)
 
+###############################################
+
 # 2
 # antall_studenter = 55
 # antall_kvinner = 32
@@ -35,11 +37,22 @@
 # kvinneandel = antall_kvinner/antall_studenter 
 # print(f"kvinneandelen er {kvinneandel}")
 
+###############################################
+
 # 3
-antall_studenter = 55 
-antall_kvinner = 32
-kvinneandel = antall_kvinner/antall_studenter 
-print('kvinneandelen er ', kvinneandel)
+# antall_studenter = 55 
+# antall_kvinner = 32
+# kvinneandel = antall_kvinner/antall_studenter 
+# print('kvinneandelen er ' kvinneandel)
+
+# Her mangler , etter stringen
+
+# antall_studenter = 55 
+# antall_kvinner = 32
+# kvinneandel = antall_kvinner/antall_studenter 
+# print('kvinneandelen er ' kvinneandel)
+
+###############################################
 
 # 4
 # kvinneandel = antall_kvinner/antall_studenter 
@@ -47,9 +60,13 @@ print('kvinneandelen er ', kvinneandel)
 # antall_kvinner = 32
 # print('kvinneandelen er ', kvinneandel)
 
+###############################################
+
 # 5
 # kvinneandel = antall_kvinner=32/antall_studenter=55
 # print('kvinneandelen er ', kvinneandel)
+
+###############################################
 
 # 6
 # antall_studenter = 55
