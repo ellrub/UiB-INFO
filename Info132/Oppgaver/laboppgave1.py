@@ -1,75 +1,59 @@
-#---------------- Programmeringsoppgaver ----------------#
+saldo = 500
+rentesats = 0.01
+rente = 0
 
-# Oppgave 1 (enkel). Lag et program som tegner en pil
-# print("        *\n        **\n        * *\n*********  *\n        *   *\n*********  *\n        * *\n        **\n        *")
+def velg():
+    while saldo > 0:
+        user_input = input("--------------------\n1 - vis saldo\n2 - innskudd\n3 - uttak\n4 - renteoppgjør\n--------------------\n")
+        if user_input == "1":
+            print(f"Saldo: {saldo}")
+        elif user_input == "rentesats":
+            print(rentesats)
+        elif user_input == "2":
+            print(innskudd(innskudd))
+        elif user_input == "3":
+            print(uttak(uttak))
+        elif user_input == "beregn rente":
+            print(beregn_rente())
+        elif user_input == "4":
+            print(renteoppgjør())
+        elif user_input == "q":
+            break
 
-#Oppgave 2 (middels).
+def innskudd(innskudd):
+    global saldo
+    global rentesats
+    innskudd = int(input("Hvor mye vil du sette inn?: "))
+    saldo += innskudd
+    if saldo > 1000000 and rentesats == 0.01:
+        print("Gratulerer, du får bonusrente!")
+        rentesats = 0.02
+    return saldo
 
-# 2a)  Finn feilen i de følgende programmene og bestem om det er snakk om en syntaktisk, 
-# logisk eller semantisk feil, jfr avsnitt 1.10 i læreboken. (Kjør gjerne programmene i 
-# IDLE for å se hvilke feilmeldinger som gis.)
+def uttak(uttak):
+    global saldo
+    global rentesats
+    uttak = int(input("Hvor mye vil du ta ut?: "))
+    if uttak < saldo:
+        saldo -= uttak
+    else:
+        print("Overtrekk")
+    if saldo < 1000000 and rentesats == 0.02:
+        print("Du har nå ordinær rente.")
+        rentesats = 0.01
+    return saldo
 
-# 1
-# antall_studenter = 55
-# antall_kvinner = 32
-# kvinneandel = Antall_kvinner/antall_studenter 
-# print('kvinneandelen er ', kvinneandel)
+def beregn_rente():
+    global saldo
+    global rentesats
+    global rente
+    rente = saldo * rentesats
+    return rente
 
-# Denne vil gi en NameError fordi Antall_kvinner ikke er definert.
+def renteoppgjør():
+    global rente
+    global saldo
+    saldo += rente
+    return saldo
 
-# antall_studenter = 55
-# antall_kvinner = 32
-# kvinneandel = antall_kvinner/antall_studenter 
-# print('kvinneandelen er ', kvinneandel)
-
-###############################################
-
-# 2
-# antall_studenter = 55
-# antall_kvinner = 32
-# kvinneandel = antall_kvinner/antall_studenter 
-# print(kvinneandelen er , kvinneandel)
-
-# Her er ikke "er" og "kvinneandelen" definert
-
-# antall_studenter = 55
-# antall_kvinner = 32
-# kvinneandel = antall_kvinner/antall_studenter 
-# print(f"kvinneandelen er {kvinneandel}")
-
-###############################################
-
-# 3
-# antall_studenter = 55 
-# antall_kvinner = 32
-# kvinneandel = antall_kvinner/antall_studenter 
-# print('kvinneandelen er ' kvinneandel)
-
-# Her mangler , etter stringen
-
-# antall_studenter = 55 
-# antall_kvinner = 32
-# kvinneandel = antall_kvinner/antall_studenter 
-# print('kvinneandelen er ' kvinneandel)
-
-###############################################
-
-# 4
-# kvinneandel = antall_kvinner/antall_studenter 
-# antall_studenter = 55
-# antall_kvinner = 32
-# print('kvinneandelen er ', kvinneandel)
-
-###############################################
-
-# 5
-# kvinneandel = antall_kvinner=32/antall_studenter=55
-# print('kvinneandelen er ', kvinneandel)
-
-###############################################
-
-# 6
-# antall_studenter = 55
-# antall_kvinner = 32
-# kvinneandel = antall_studenter/antall_kvinner 
-# print('kvinneandelen er ', kvinneandel)
+velg()
