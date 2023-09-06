@@ -1,21 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;800&display=swap");
+
+:root {
+    --font-base: "Poppins", sans-serif;
+
+    --color-light: #e5e9ea;
+    --color-dark: #34383a;
+    --color-gray: #95a7af;
+    --color-blue: #c9e3f0;
+}
+
 body {
     margin: 0;
     padding: 0;
-    background-color: floralwhite;
-}
-
-nav ul{
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    justify-content: center;
-}
-
-nav ul a {
-    text-decoration: none;
-    padding: 0 3rem 0 3rem;
-    text-transform: capitalize;
-    font-size: 1.5rem;
+    background-color: var(--color-light);
 }
 
 h2 {
@@ -24,6 +21,7 @@ h2 {
 
 header {
     text-align: center;
+    margin-top: 8rem;
 }
 
 img {
