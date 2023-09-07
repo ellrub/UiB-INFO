@@ -1,0 +1,8 @@
+h1 {
+    font-family: var(--font-logo);
+    font-size: 7rem;
+}
+
+main {
+    background-color: var(--color-light);
+}

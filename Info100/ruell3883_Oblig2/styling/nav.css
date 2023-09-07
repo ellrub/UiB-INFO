@@ -1,8 +1,11 @@
+@import url(../index.css);
+
 nav {
     box-shadow: 0px 10px 20px 1px rgb(204, 202, 202);
     position: fixed;
     top: 0;
     width: 100%;
+    background-color: var(--color-light);
 }
 
 nav ul {

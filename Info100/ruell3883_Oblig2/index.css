@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 :root {
     --font-base: "Poppins", sans-serif;
+    --font-logo: "Great Vibes", cursive;
 
     --color-light: #e5e9ea;
     --color-dark: #34383a;
@@ -14,6 +16,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--color-light);
+    font-family: var(--font-base);
 }
 
 h2 {
@@ -25,7 +28,7 @@ header {
     margin-top: 8rem;
 }
 
-img {
+.itemImg {
     width: 300px;
     height: 250px;
     object-fit: cover;
