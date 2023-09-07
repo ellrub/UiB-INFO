@@ -22,3 +22,13 @@ nav ul a {
     font-size: 1.5rem;
     color: var(--color-dark);
 }
+
+nav ul li {
+    transition: filter 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+nav ul li:hover {
+    transform: translateY(-0.18rem);
+    filter: brightness(220%);
+    cursor: pointer;
+}
