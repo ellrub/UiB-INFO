@@ -12,3 +12,19 @@ INFO100 provided a basic introduction to Information and Communication Technolog
 * Luciano Floridi. Information. A Very Short Introduction.
 * Exercises
 * Lectures
+
+### Lectures
+1. Information and communications technologi
+2. Data, information and knowlegde
+3. Computers
+4. Computers
+5. Internet
+6. Nettwork
+7. Informationsystems
+8. Datahandling
+9. Programdevelopment
+10. Systemdevelopment
+11. Privacy and security
+12. Interactiondesign
+13. IT in soceiety
+14. Summary
