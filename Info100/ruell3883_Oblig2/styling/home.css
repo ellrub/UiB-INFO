@@ -1,8 +1,97 @@
-h1 {
-    font-family: var(--font-logo);
-    font-size: 7rem;
+main {
+    background-color: var(--color-lighter);
 }
 
-main {
-    background-color: var(--color-light);
+h1 {
+    font-family: var(--font-logo);
+    font-size: 8rem;
+    color: var(--color-dark);
+    text-align: center;
+    margin-bottom: 0;
+}
+
+header {
+    background-color: var(--color-blue);
+    padding-top: 1rem;
+    margin-top: 0;
+
+    .headerDiv {    
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 50%;
+        margin: 0 auto;
+        
+        > div {
+    
+            > h2 {
+                font-size: 4rem;
+                width: 500px;
+                line-height: 3.5rem;
+                margin-bottom: 0rem;
+                color: var(--color-dark);
+            }
+
+            > h4 {
+                text-transform: uppercase;
+                margin-top: 0rem;
+                letter-spacing: 0.07rem;
+                font-weight: 400;
+                color: var(--color-dark);
+            }
+
+            > a {
+                background-color: var(--color-dark);
+                color: var(--color-lighter);
+                text-decoration: none;
+                text-transform: uppercase;
+                padding: 1rem 2rem;
+                font-weight: 400;
+            }
+        }
+
+        > img {
+            height: 500px;
+        }
+    }
+
+}
+
+.returnSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    box-shadow:
+    0px 4.4px 8.5px -10px rgba(0, 0, 0, 0.035),
+    0px 35px 68px -10px rgba(0, 0, 0, 0.07);
+
+    .returnContainer {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+
+        > div {
+            width: 60%;
+            padding: 0 1rem;
+
+            > h4 {
+                text-transform: capitalize;
+                margin-bottom: 0rem;
+                font-size: 1.5rem;
+                letter-spacing: 0.05;
+            }
+
+            > p {
+                margin-top: 0rem;
+                line-height: 1.2rem;
+                letter-spacing: 0.02;
+            }
+        }
+
+    }
+    
+    .border {
+        border-left: 1px solid var(--color-dark);
+    }
 }
