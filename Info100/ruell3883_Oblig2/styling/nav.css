@@ -1,7 +1,7 @@
 @import url(../index.css);
 
 nav {
-    box-shadow: 0px 10px 20px 1px rgb(204, 202, 202);
+    box-shadow: 0px 1px 50px 1px rgb(155, 163, 168);
     position: fixed;
     top: 0;
     width: 100%;
