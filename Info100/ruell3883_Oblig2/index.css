@@ -6,7 +6,7 @@
     --font-logo: "Great Vibes", cursive;
 
     --color-light: #e5e9ea;
-    --color-dark: #34383a;
+    --color-dark: #202324;
     --color-gray: #95a7af;
     --color-blue: #c9e3f0;
     --color-lighter: #f0f7f8;
@@ -15,7 +15,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: var(--color-light);
+    background-color: var(--color-lighter);
     font-family: var(--font-base);
 }
 
@@ -24,7 +24,7 @@ h2 {
 }
 
 header {
-    text-align: center;
+    
     margin-top: 8rem;
 }
 
