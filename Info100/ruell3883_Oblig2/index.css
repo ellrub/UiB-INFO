@@ -28,23 +28,6 @@ header {
     margin-top: 8rem;
 }
 
-.itemImg {
-    width: 300px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 1rem;
-    margin: 0 1rem 0 1rem;
-    padding-bottom: 0rem;
-}
-
-.container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    text-align: center;
-    padding-bottom: 0rem;
-}
-
 .table {
     display: flex;
     flex-direction: row;
