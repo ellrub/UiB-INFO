@@ -1,0 +1,41 @@
+main {
+    background-color: var(--color-blue);
+    padding-top: 1rem;
+}
+
+h2 {
+    font-family: var(--font-base);
+    font-size: 8rem;
+    color: var(--color-dark);
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .innerContainer {
+        display: flex;
+
+        margin-bottom: 2rem;
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            width: 300px;
+            height: 340px;
+            border: 1px solid red;
+
+            margin: 0 1rem 0 1rem;
+
+            .innerBox {
+                width: 300px;
+                height: 90px;
+                border: 3px solid blue;
+            }
+        }
+    }
+}
