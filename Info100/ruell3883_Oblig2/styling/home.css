@@ -16,7 +16,6 @@ header {
     margin-top: 0;
 
     .headerDiv {    
-        display: flex;
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
@@ -59,7 +58,6 @@ header {
 }
 
 .returnSection {
-    display: flex;
     flex-direction: row;
     justify-content: space-around;
     box-shadow:
@@ -67,7 +65,6 @@ header {
     0px 35px 68px -10px rgba(0, 0, 0, 0.07);
 
     .returnContainer {
-        display: flex;
         flex-direction: row-reverse;
         align-items: center;
         justify-content: center;
@@ -98,48 +95,107 @@ header {
 }
 
 .container {
-    display: flex;
     justify-content: center;
-    margin-top: 1rem;
+    align-items: center;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+    background-color: var(--color-blue);
+
+    .backgroundLogo {
+        font-size: 25rem;
+        position: absolute;
+        letter-spacing: 0.1rem;
+        font-weight: 600;
+        z-index: 2;
+        font-family: var(--font-logo);
+        color: #20232422;
+        
+    }
+
+    > a {
+        text-decoration: none;
+    }
 
         .innerContainer {
-            display: flex;
             flex-direction: column;
+            margin-right: 1rem;
+            z-index: 3;
 
-            .relax {
+            
+
+            > a {
+                text-decoration: none;
+            }
+
+            .sale {
+                background-image: url("../assets/temp.jpg");
+                width: 300px;
+                height: 250px;
+                background-size: cover;
+                margin-bottom: 1rem;
+                border-radius: 3px;
                 
-                > img {
-                    width: 300px;
-                    height: 250px;
-                    object-fit: cover;
-                    margin: 0 1rem 0 1rem;
-                    padding-bottom: 0rem;
-                    margin: 1rem;
+                transition: box-shadow 0.2s ease-in-out, filter 0.2s ease-in-out, transform 0.2s ease-in-out;
+
+                > p {
+                    letter-spacing: 0.03rem;
                 }
             }
-    
-            .business {
 
-                > img {
-                    width: 300px;
-                    height: 250px;
-                    object-fit: cover;
-                    margin: 0 1rem 0 1rem;
-                    padding-bottom: 0rem;
-                }  
+            .sale:hover {
+                transform: translateY(-0.18rem);
+                filter: brightness(135%);
+                cursor: pointer;
+                box-shadow: 0px 5px 5px 0px rgb(68, 68, 68);
+            }
+    
+            .new {
+                background-image: url("../assets/temp.jpg");
+                width: 300px;
+                height: 250px;
+                background-size: cover;
+                border-radius: 3px;
+
+                flex-direction: column;
+                justify-content: end;
+                align-items: end;
+                transition: box-shadow 0.2s ease-in-out, filter 0.2s ease-in-out, transform 0.2s ease-in-out;
+
+                > p {
+                    letter-spacing: 0.03rem;
+                }
+            }
+
+            .new:hover {
+                transform: translateY(0.18rem);
+                filter: brightness(135%);
+                cursor: pointer;
+                box-shadow: 0px -5px 5px 0px rgb(68, 68, 68);
             }
         }
 
-        .sporty {
-
-            > img {
+        .limited {
+            background-image: url("../assets/temp.jpg");
                 width: 300px;
-                height: 522px;
-                object-fit: cover;
-                margin: 0 1rem 0 1rem;
-                padding-bottom: 0rem;
-                margin-top: 1rem;
-            }
+                height: 516px;
+                background-size: cover;
+                transition: box-shadow 0.2s ease-in-out, filter 0.2s ease-in-out, transform 0.2s ease-in-out;
+                z-index: 3;
+                border-radius: 3px;
+
+                > p {                 
+                    font-weight: 600;
+                    writing-mode: vertical-rl;
+                    text-orientation: upright;
+                    
+                    text-align: center;
+                }
+        }
+
+        .limited:hover {
+            transform: translateX(0.18rem);
+            filter: brightness(135%);
+            cursor: pointer;
+            box-shadow: -5px 0px 5px 0px rgb(68, 68, 68);
         }
 }
-    
