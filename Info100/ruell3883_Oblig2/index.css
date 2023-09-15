@@ -18,6 +18,7 @@ body {
     padding: 0;
     background-color: var(--color-lighter);
     font-family: var(--font-base);
+    overflow-x: hidden;
 }
 
 h2 {
@@ -70,7 +71,14 @@ footer {
     text-transform: uppercase;
     font-size: 4rem;
     font-weight: 600;
-    text-shadow: 1px 1px 1px black;
+    text-shadow: 1px 1px 5px black;
+    letter-spacing: 0;
+    word-wrap: break-word;
+}
+
+.limitedP {
+    letter-spacing: -1.2rem;
+    line-height: 3rem;
 }
 
 .table {

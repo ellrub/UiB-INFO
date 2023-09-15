@@ -4,7 +4,7 @@ main {
 
 h1 {
     font-family: var(--font-logo);
-    font-size: 8rem;
+    font-size: 10rem;
     color: var(--color-dark);
     text-align: center;
     margin-bottom: 0;
@@ -102,7 +102,7 @@ header {
     background-color: var(--color-blue);
 
     .backgroundLogo {
-        font-size: 25rem;
+        font-size: 40rem;
         position: absolute;
         letter-spacing: 0.1rem;
         font-weight: 600;
@@ -128,7 +128,7 @@ header {
             }
 
             .sale {
-                background-image: url("../assets/temp.jpg");
+                background-image: url("https://source.unsplash.com/DzIt-fTYv4E");
                 width: 300px;
                 height: 250px;
                 background-size: cover;
@@ -150,7 +150,7 @@ header {
             }
     
             .new {
-                background-image: url("../assets/temp.jpg");
+                background-image: url("https://source.unsplash.com/87luO7iL1mM");
                 width: 300px;
                 height: 250px;
                 background-size: cover;
@@ -175,7 +175,7 @@ header {
         }
 
         .limited {
-            background-image: url("../assets/temp.jpg");
+            background-image: url("https://source.unsplash.com/zkctapwhzxc");
                 width: 300px;
                 height: 516px;
                 background-size: cover;
