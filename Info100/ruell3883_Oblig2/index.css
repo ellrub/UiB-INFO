@@ -113,3 +113,13 @@ footer {
     }
         
 }
+
+.backgroundLogo {
+    font-size: 40rem;
+    position: absolute;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    z-index: 2;
+    font-family: var(--font-logo);
+    color: #20232422;
+}
