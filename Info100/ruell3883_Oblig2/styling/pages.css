@@ -15,31 +15,40 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    
     .innerContainer {
         display: flex;
+        
 
         margin-bottom: 2rem;
 
         .box {
             display: flex;
             flex-direction: column;
-            justify-content: end;
+            justify-content: space-between;
             width: 300px;
             height: 340px;
-            border: 1px solid red;
+            border-radius: 0.5rem 4rem 0.5rem 4rem;
+            box-shadow: 0px 5px 5px 0px rgba(68, 68, 68, 0.582);
 
             margin: 0 1rem 0 1rem;
 
-            > img {
-                object-fit: cover;
+            background-color: var(--color-lighter);
+            z-index: 3;
 
+            > img {
+                width: 300px;
+                height: 250px;
+                object-fit: cover;
+                border-top-right-radius: 4rem;
+                border-top-left-radius: 0.5rem;
+                border-radius: 0.5rem 4rem 0rem 0rem;
             }
 
             .innerBox {
                 width: 300px;
                 height: 90px;
-                border: 3px solid blue;
+                padding-left: 1rem;
             }
         }
     }
