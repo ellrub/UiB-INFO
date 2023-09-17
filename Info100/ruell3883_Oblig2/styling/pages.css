@@ -8,6 +8,10 @@ h2 {
     font-size: 8rem;
     color: var(--color-dark);
     text-align: center;
+
+    @media screen and (max-width: 999px) {
+        font-size: 4rem;
+    }
 }
 
 .container {
@@ -18,9 +22,12 @@ h2 {
     
     .innerContainer {
         display: flex;
-        
-
         margin-bottom: 2rem;
+
+        @media screen and (max-width: 999px) {
+            flex-direction: column;
+            margin-bottom: 0rem;
+        }
 
         .box {
             display: flex;
@@ -35,6 +42,10 @@ h2 {
 
             background-color: var(--color-lighter);
             z-index: 3;
+
+            @media screen and (max-width: 999px) {
+                margin-bottom: 2rem;
+            }
 
             > img {
                 width: 300px;

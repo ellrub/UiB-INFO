@@ -27,12 +27,10 @@ h2 {
 
 header {
     margin-top: 8rem;
-}
 
-.table {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    @media screen and (max-width: 999px) {
+        margin-top: 1rem;
+    }
 }
 
 footer {
@@ -85,12 +83,20 @@ footer {
     background-color: var(--color-dark);
     padding-top: 4rem;
 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
     > table {
         border-collapse: collapse;
-        margin: 25px 0;
+        margin: 1rem 0;
         font-size: 1rem;
         min-width: 400px;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+        @media screen and (max-width: 999px) {
+            min-width: 300px;
+        }
     
         > thead tr {
             background-color: var(--color-lighter);
@@ -100,6 +106,10 @@ footer {
     
         > th, td {
             padding: 12px 15px;
+
+            @media screen and (max-width: 999px) {
+                padding: 0.8rem 0.5rem;
+            }
         }
     
         > tbody tr {
@@ -115,11 +125,16 @@ footer {
 }
 
 .backgroundLogo {
-    font-size: 40rem;
+    font-size: 35rem;
     position: absolute;
     letter-spacing: 0.1rem;
     font-weight: 600;
     z-index: 2;
     font-family: var(--font-logo);
     color: #20232422;
+
+    @media screen and (max-width: 1600px) {
+        display: none;
+    }
+    
 }
