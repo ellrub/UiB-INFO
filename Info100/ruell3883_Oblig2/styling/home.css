@@ -11,14 +11,14 @@ h1 {
 
     @media screen and (max-width: 999px) {
         font-size: 5rem;
-        margin-top: 0.5rem;
+        margin-top: 3rem;
     }
 }
 
 header {
     background-color: var(--color-blue);
     padding-top: 1rem;
-    margin-top: 0;
+    
 
     .headerDiv {    
         flex-direction: row;
@@ -62,6 +62,13 @@ header {
                 text-transform: uppercase;
                 padding: 1rem 2rem;
                 font-weight: 400;
+                transition: filter 0.2s ease-in-out, transform 0.2s ease-in-out;
+            }
+
+            > a:hover {
+                transform: translateY(-0.18rem);
+                filter: brightness(230%);
+                cursor: pointer;
             }
         }
 
