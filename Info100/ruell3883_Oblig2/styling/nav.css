@@ -17,25 +17,25 @@
         > li a {
             text-decoration: none;
             padding: 0 3rem 0 3rem;
-
-            @media screen and (max-width: 1199px) {
-                padding: 0 2rem 0 2rem;
-            }
-            
             font-family: var(--font-base);
             font-weight: 600;
             text-transform: capitalize;
             font-size: 1.5rem;
             color: var(--color-dark);
+
+            @media screen and (max-width: 1199px) {
+                padding: 0 2rem 0 2rem;
+            }
+            
         }
     
-        > ul li {
+        > li {
             transition: filter 0.2s ease-in-out, transform 0.2s ease-in-out;
         }
         
-        > ul li:hover {
+        > li:hover {
             transform: translateY(-0.18rem);
-            filter: brightness(220%);
+            filter: brightness(270%);
             cursor: pointer;
         }
     }
@@ -82,7 +82,7 @@
     }
 
     @media screen and (max-width: 999px) {
-        display: contents;
+        display: block;
     }
 
 
