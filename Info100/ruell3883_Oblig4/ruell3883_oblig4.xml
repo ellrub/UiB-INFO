@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<message id="42">
+    <from>
+        <person>
+            <full_name>Rick Sanchez</full_name>
+            <e_mail>rick_sanchez@c137.com</e_mail>
+        </person>
+    </from>
+    <note>Hi, i was wondering if this shoestore is able to deliver shoes to dimensions other than C-137?</note>
+</message>
+
+<!-- =========================================== -->
+
+<person id="4">
+    <first_name>Morty</first_name>
+    <last_name>Smith</last_name>
+    <age>14</age>
+    <institution>Harry Herpson High School</institution>
+</person>
+
+<!-- =========================================== -->
+
+<assignment id="81">
+    <author>Jerry Smith</author>
+    <question>What is einstein's famous equation?</question>
+    <answer>E something.. Eggplant += Melon</answer>
+</assignment>
