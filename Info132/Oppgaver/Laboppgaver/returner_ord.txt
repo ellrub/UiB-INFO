@@ -1,0 +1,2 @@
+Det finnes en ape ved navn Per.
+Per kan en algoritme som bruker noe som kalles alfa-beta beskjæring.
