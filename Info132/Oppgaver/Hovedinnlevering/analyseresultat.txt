@@ -1,0 +1,40 @@
+Avsnitt 1:
+Avsnitttekst: regjeringspartiet ble størst men opposisjonen kan få makten
+Ordliste: ['regjeringspartiet', 'ble', 'størst', 'men', 'opposisjonen',
+'kan', 'få', 'makten']
+Ordtelling: [1, 1, 1, 1, 1, 1, 1, 1]
+Avsnitt 2:
+Avsnitttekst: – demokratiet har vunnet dette er slutten på pis-regjeringen
+jublet donald tusk fra scenen dette sa han bare minutter etter at
+valglokalene stengte kl 2100 søndag
+Ordliste: ['–', 'demokratiet', 'har', 'vunnet', 'dette', 'er', 'slutten',
+'på', 'pis-regjeringen', 'jublet', 'donald', 'tusk', 'fra', 'scenen', 'sa', 'han',
+'bare', 'minutter', 'etter', 'at', 'valglokalene', 'stengte', 'kl', '2100',
+'søndag']
+Ordtelling: [1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+1, 1, 1, 1]
+Avsnitt 3:
+Avsnitttekst: de mange lange køene preget den historiske dagen i polen aldri
+før
+har så mange polakker stemt ved et valg bombetrusler mot flere
+valglokaler i warszawa hjalp ikke på køene rett etter midnatt
+var fortsatt et valglokale i byen wroclaw åpent
+Ordliste: ['de', 'mange', 'lange', 'køene', 'preget', 'den', 'historiske',
+'dagen', 'i', 'polen', 'aldri', 'før', 'har', 'så', 'polakker', 'stemt', 'ved',
+'et', 'valg', 'bombetrusler', 'mot', 'flere', 'valglokaler', 'warszawa', 'hjalp',
+'ikke', 'på', 'rett', 'etter', 'midnatt', 'var', 'fortsatt', 'valglokale', 'byen',
+'wroclaw', 'åpent']
+Ordtelling: [1, 2, 1, 2, 1, 1, 1, 1, 3, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1,
+1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+Avsnitt 4:
+Avsnitttekst: de første målingene viser at det sittende regjeringspartiet
+lovog rettferdighet (pis) fikk flest stemmer fortsatt skal mange
+stemmer telles opp likevel var opposisjonen til pis med tusk i
+spissen raskt ute med å erklære seier
+Ordliste: ['de', 'første', 'målingene', 'viser', 'at', 'det', 'sittende',
+'regjeringspartiet', 'lov-', 'og', 'rettferdighet', '(pis)', 'fikk', 'flest',
+'stemmer', 'fortsatt', 'skal', 'mange', 'telles', 'opp', 'likevel', 'var',
+'opposisjonen', 'til', 'pis', 'med', 'tusk', 'i', 'spissen', 'raskt', 'ute', 'å',
+'erklære', 'seier']
+Ordtelling: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1,
+1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1]
