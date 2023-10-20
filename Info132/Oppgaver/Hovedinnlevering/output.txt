@@ -1,0 +1,35 @@
+split_text index 0
+regjeringspartiet ble størst men opposisjonen kan få makten
+divide_text index 0
+['regjeringspartiet', 'ble', 'størst', 'men', 'opposisjonen', 'kan', 'få', 'makten']
+create_word_freq_dict index 0
+{'regjeringspartiet': 1, 'ble': 1, 'størst': 1, 'men': 1, 'opposisjonen': 1, 'kan': 1, 'få': 1, 'makten': 1}
+
+split_text index 1
+ demokratiet har vunnet  dette er slutten på pisregjeringen
+jublet donald tusk fra scenen dette sa han bare minutter etter at
+valglokalene stengte kl 2100 søndag
+divide_text index 1
+['demokratiet', 'har', 'vunnet', 'dette', 'er', 'slutten', 'på', 'pisregjeringen', 'jublet', 'donald', 'tusk', 'fra', 'scenen', 'dette', 'sa', 'han', 'bare', 'minutter', 'etter', 'at', 'valglokalene', 'stengte', 'kl', '2100', 'søndag']
+create_word_freq_dict index 1
+{'demokratiet': 1, 'har': 1, 'vunnet': 1, 'dette': 2, 'er': 1, 'slutten': 1, 'på': 1, 'pisregjeringen': 1, 'jublet': 1, 'donald': 1, 'tusk': 1, 'fra': 1, 'scenen': 1, 'sa': 1, 'han': 1, 'bare': 1, 'minutter': 1, 'etter': 1, 'at': 1, 'valglokalene': 1, 'stengte': 1, 'kl': 1, '2100': 1, 'søndag': 1}
+
+split_text index 2
+de mange lange køene preget den historiske dagen i polen aldri før
+har så mange polakker stemt ved et valg bombetrusler mot flere
+valglokaler i warszawa hjalp ikke på køene rett etter midnatt
+var fortsatt et valglokale i byen wroclaw åpent
+divide_text index 2
+['de', 'mange', 'lange', 'køene', 'preget', 'den', 'historiske', 'dagen', 'i', 'polen', 'aldri', 'før', 'har', 'så', 'mange', 'polakker', 'stemt', 'ved', 'et', 'valg', 'bombetrusler', 'mot', 'flere', 'valglokaler', 'i', 'warszawa', 'hjalp', 'ikke', 'på', 'køene', 'rett', 'etter', 'midnatt', 'var', 'fortsatt', 'et', 'valglokale', 'i', 'byen', 'wroclaw', 'åpent']
+create_word_freq_dict index 2
+{'de': 1, 'mange': 2, 'lange': 1, 'køene': 2, 'preget': 1, 'den': 1, 'historiske': 1, 'dagen': 1, 'i': 3, 'polen': 1, 'aldri': 1, 'før': 1, 'har': 1, 'så': 1, 'polakker': 1, 'stemt': 1, 'ved': 1, 'et': 2, 'valg': 1, 'bombetrusler': 1, 'mot': 1, 'flere': 1, 'valglokaler': 1, 'warszawa': 1, 'hjalp': 1, 'ikke': 1, 'på': 1, 'rett': 1, 'etter': 1, 'midnatt': 1, 'var': 1, 'fortsatt': 1, 'valglokale': 1, 'byen': 1, 'wroclaw': 1, 'åpent': 1}
+
+split_text index 3
+de første målingene viser at det sittende regjeringspartiet lovog rettferdighet pis fikk flest stemmer fortsatt skal mange
+stemmer telles opp likevel var opposisjonen til pis med tusk i
+spissen raskt ute med å erklære seier
+divide_text index 3
+['de', 'første', 'målingene', 'viser', 'at', 'det', 'sittende', 'regjeringspartiet', 'lovog', 'rettferdighet', 'pis', 'fikk', 'flest', 'stemmer', 'fortsatt', 'skal', 'mange', 'stemmer', 'telles', 'opp', 'likevel', 'var', 'opposisjonen', 'til', 'pis', 'med', 'tusk', 'i', 'spissen', 'raskt', 'ute', 'med', 'å', 'erklære', 'seier']
+create_word_freq_dict index 3
+{'de': 1, 'første': 1, 'målingene': 1, 'viser': 1, 'at': 1, 'det': 1, 'sittende': 1, 'regjeringspartiet': 1, 'lovog': 1, 'rettferdighet': 1, 'pis': 2, 'fikk': 1, 'flest': 1, 'stemmer': 2, 'fortsatt': 1, 'skal': 1, 'mange': 1, 'telles': 1, 'opp': 1, 'likevel': 1, 'var': 1, 'opposisjonen': 1, 'til': 1, 'med': 2, 'tusk': 1, 'i': 1, 'spissen': 1, 'raskt': 1, 'ute': 1, 'å': 1, 'erklære': 1, 'seier': 1}
+
