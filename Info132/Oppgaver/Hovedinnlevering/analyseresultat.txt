@@ -19,5 +19,6 @@ Avsnit 4
 Avsnittekst: de første målingene viser at det sittende regjeringspartiet lovog rettferdighet pis fikk flest stemmer fortsatt skal mange
 stemmer telles opp likevel var opposisjonen til pis med tusk i
 spissen raskt ute med å erklære seier
+
 Ordtelling / Ordliste: {'de': 1, 'første': 1, 'målingene': 1, 'viser': 1, 'at': 1, 'det': 1, 'sittende': 1, 'regjeringspartiet': 1, 'lovog': 1, 'rettferdighet': 1, 'pis': 2, 'fikk': 1, 'flest': 1, 'stemmer': 2, 'fortsatt': 1, 'skal': 1, 'mange': 1, 'telles': 1, 'opp': 1, 'likevel': 1, 'var': 1, 'opposisjonen': 1, 'til': 1, 'med': 2, 'tusk': 1, 'i': 1, 'spissen': 1, 'raskt': 1, 'ute': 1, 'å': 1, 'erklære': 1, 'seier': 1}
 
