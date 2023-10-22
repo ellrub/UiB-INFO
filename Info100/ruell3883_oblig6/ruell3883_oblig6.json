@@ -1,0 +1,21 @@
+{
+    "message": {
+        "id": 42,
+        "fullName": "Rick Sanchez",
+        "e-mail": "rick_sanchez@c137.com",
+        "note": "Hi, i was wondering if this shoestore is able to deliver shoes to dimensions other than C-137?"
+    },
+    "person": {
+        "id": 4,
+        "firstName": "Morty",
+        "lastName": "Smith",
+        "age": 14,
+        "institution": "Harry Herpson High School"
+    },
+    "assignment": {
+        "id": 81,
+        "author": "Jerry Smith",
+        "question": "What's Einstein's famous equation?",
+        "answer": "E something.. Eggplant += Melon"
+    }
+}
