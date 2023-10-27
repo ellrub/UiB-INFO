@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+:root {
+    --font-base: "Poppins", sans-serif;
+    --font-logo: "Great Vibes", cursive;
+
+    --color-light: #e5e9ea;
+    --color-dark: #202324;
+    --color-gray: #95a7af;
+    --color-blue: #c9e3f0;
+    --color-lighter: #f0f7f8;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-lighter);
+    font-family: var(--font-base);
+    overflow-x: hidden;
+}
+
+h2 {
+    text-transform: capitalize;
+}
+
+header {
+    margin-top: 3rem;
+
+    @media screen and (max-width: 999px) {
+        margin-top: 4rem;
+    }
+}
+
+footer {
+    background-color: var(--color-dark);
+    color: var(--color-lighter);
+    padding: 1rem;
+    text-align: center;
+    padding-bottom: 4rem;
+
+    > p {
+        font-size: 1.5rem;
+        
+        > a {
+            color: var(--color-lighter);
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+    }
+
+    > p:last-of-type {
+        font-size: 1rem;
+    }
+
+}
+
+.flex {
+    display: flex;
+}
+
+.cardText {
+    color: var(--color-lighter);
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 0rem;
+
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: 600;
+    text-shadow: 1px 1px 5px black;
+    letter-spacing: 0;
+    word-wrap: break-word;
+}
+
+.limitedP {
+    letter-spacing: -1.2rem;
+    line-height: 3rem;
+}
+
+.table {
+    background-color: var(--color-dark);
+    padding-top: 4rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    > table {
+        border-collapse: collapse;
+        margin: 1rem 0;
+        font-size: 1rem;
+        min-width: 400px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+        @media screen and (max-width: 999px) {
+            min-width: 300px;
+        }
+    
+        > thead tr {
+            background-color: var(--color-lighter);
+            color: var(--color-dark);
+            text-align: right;
+        }
+    
+        > th, td {
+            padding: 12px 15px;
+
+            @media screen and (max-width: 999px) {
+                padding: 0.8rem 0.5rem;
+            }
+        }
+    
+        > tbody tr {
+            border-bottom: 1px solid #dddddd;
+            background-color: var(--color-gray);
+        }
+    
+        > tbody tr:nth-of-type(even) {
+            background-color: var(--color-lighter);
+        }
+    }
+        
+}
+
+.backgroundLogo {
+    font-size: 35rem;
+    position: absolute;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    z-index: 2;
+    font-family: var(--font-logo);
+    color: #20232422;
+
+    @media screen and (max-width: 1600px) {
+        display: none;
+    }
+    
+}
