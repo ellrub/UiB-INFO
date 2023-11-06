@@ -1,0 +1,5 @@
+{
+    "dataworkspace.excludedProjects": [
+        "oblig7/oblig7.sqlproj"
+    ]
+}
