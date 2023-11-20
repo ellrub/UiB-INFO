@@ -23,7 +23,7 @@ class Emne():
         print(f"Emne: {self.code}: {self.title}")
 
     
-# class Evaluation():
+# class Review():
 #     def __init__(self):
 #         pass
     
