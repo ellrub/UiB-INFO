@@ -14,10 +14,10 @@ def increment_num():
     current_num = int(num.get())
     num.set(str(current_num + 1))
 
-text = Label(window, textvariable = num)
-text.pack()
+# text = Label(window, textvariable = num)
+# text.pack()
 
-i_button = Button(frame, text="Øk verdi", command = increment_num)
+i_button = Button(frame, textvariable = num, command = increment_num)
 i_button.pack()
 
 close_button = Button(frame, text="Farvel", command = window.destroy)
