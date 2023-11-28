@@ -7,7 +7,7 @@ class Student():
         print(f"Navn: {self.user_name}, epost: {self.e_mail}")
 
     def new_evaluation(self, code, evaluation, score):
-        print(f"Vurderinger\n{self.user_name}, {code}\t{evaluation}, skår={score}")
+        print(f"Vurderinger\n{self.user_name}, {info132.code}\t{evaluation}, skår={score}")
 
         
 
@@ -21,6 +21,10 @@ class Emne():
 
     def output(self):
         print(f"Emne: {self.code}: {self.title}")
+
+    def avarage_score():
+        print(f"Gjennomsnittlig vurdering: ")
+        pass
 
     
 # class Review():
