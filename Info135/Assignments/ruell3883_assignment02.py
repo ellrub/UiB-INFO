@@ -72,3 +72,50 @@ my_list = [5, 4, 3, 2, 1, 2, 3, 4, 5]
 new_list = sort_and_rem_dup(my_list)
 print(new_list)
 
+# 4
+class Stack:
+    def __init__(self):
+        self.items = []
+
+    def push(self, item):
+        self.items.append(item)
+
+    def pop(self):
+        return self.items.pop()
+
+    def is_empty(self):
+        return not bool(self.items)
+
+class Queue:
+    def __init__(self):
+        self.items = []
+
+    def enqueue(self, item):
+        self.items.append(item)
+
+    def dequeue(self):
+        return self.items.pop(0)
+
+    def is_empty(self):
+        return not bool(self.items)
+
+
+def check_palindrome(word):
+    stack = Stack()
+    queue = Queue()
+
+    for letter in word:
+        stack.push(letter)
+        queue.enqueue(letter)
+
+    while not stack.is_empty():
+        if stack.pop() != queue.dequeue():
+            return "Not Palindrome"
+
+    return "Palindrome"
+
+result = check_palindrome("hello")
+print(result)
+
+result = check_palindrome("civic")
+print(result)
