@@ -24,8 +24,8 @@ class BankSystem:
         print(bills)
 
     def pay_bills(self):
-        cheap_bill = self.bills[0]
-        print(cheap_bill)
+        cheapest_bill = self.bills[0]
+        
     
 
 bills = [("electric", 5000), ("water", 2200), ("wolfram alpha", 150)] 
