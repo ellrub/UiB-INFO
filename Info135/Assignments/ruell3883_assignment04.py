@@ -153,8 +153,12 @@ def attacks(p1, p2):
     return (row1 == row2 or column1 == column2 or abs(row1-row2) == abs(column1-column2))
 
 def is_solution(candidate_solution):
-    for char, num in candidate_solution:
-        print(char, num)
+    for i in range(len(candidate_solution)):
+        for j in range(i + 1, len(candidate_solution)):
+            if candidate_solution[i][0] == candidate_solution[j][0] or candidate_solution[i][1] == candidate_solution[j][1]:
+                return False
+    return True
+        
 
 candidate_solution1 = ['d3', 'c1', 'e5', 'b4', 'a2']
 candidate_solution2 = ['e4', 'a1', 'c5', 'd2', 'b1']
@@ -162,8 +166,8 @@ candidate_solution2 = ['e4', 'a1', 'c5', 'd2', 'b1']
 result1 = is_solution(candidate_solution1)
 result2 = is_solution(candidate_solution2)
 
-print('Candidate Solution 1:', result1)
-print('Candidate Solution 2:', result2)
+print('Candidate Solution 1:', result1) # Output True
+print('Candidate Solution 2:', result2) # Output False
 
 print()
 print('#--------------------------#')
