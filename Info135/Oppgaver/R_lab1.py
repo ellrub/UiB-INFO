@@ -55,4 +55,3 @@ def simple_search_big_o(my_list):
 my_list = [x for x in range(964)]
 print('Simple search big O:', simple_search_big_o(my_list))
 print('Binary search big 0:', binary_search_big_o(my_list))
-
