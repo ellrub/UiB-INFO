@@ -67,18 +67,6 @@ class Graph:
         if to_vertex not in self.graph:
             self.add_vertex(to_vertex)
 
-    def get_vertices(self):
-        return list(self.graph.keys())
-
-    def get_adjacency(self, vertex):
-        return self.graph.get(vertex, [])
-
-    def get_vertex(self, vertex_key):
-        return self.graph.get(vertex_key, None)
-
-    def __contains__(self, vertex):
-        return vertex in self.graph
-
     def print_graph(self):
         for vertex, edges in self.graph.items():
             print(vertex + ': ' + str(edges))
@@ -158,10 +146,6 @@ class BinarySearchTree:
             return []
         else:
             return (self.left_child.in_order() + [self.value] + self.right_child.in_order())
-        
-    def print_tree(self):
-        if not self.is_empty():
-            print(self.in_order())
 
     def compute_sum(self):
         sum = 0
@@ -181,8 +165,6 @@ my_tree.insert(6)
 my_tree.insert(8)
 my_tree.insert(10)
 my_tree.insert(12)
-
-my_tree.print_tree()
 
 print('Sum:', my_tree.compute_sum())
 print('Number of nodes:', my_tree.compute_count())
