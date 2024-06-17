@@ -38,5 +38,45 @@ def fact_func2(n):
     return memo[n]
 
 for n in range(1, 6):
-     print(fact_func2(n)) 
+     print(fact_func2(n))
 
+# Question 12
+# O(n log n)
+
+# Question 13
+# c) @abstractmethod
+
+# Question 14
+# a) self.next = None
+
+# Question 15
+# d)
+
+# Question 16
+import random as rand
+
+class HashTable:
+    def __init__(self, capacity, prime):
+        self.__capacity = capacity
+        self.__table = [None] * capacity
+        self.__prime = prime
+        self.__scale = rand.randint(1, 1000)
+
+    def hash_function(self, key):
+        return (key * self.__scale)\
+            % self.__prime \
+            % self.__capacity
+    
+# Question 17
+# c) O(n^3)
+
+from multiprocessing import Process
+
+def my_function():
+    pass
+
+my_process = Process(target = my_function)
+
+if __name__ == "__main__":
+    my_process.start()
+    my_process.join()
