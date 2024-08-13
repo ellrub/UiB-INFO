@@ -33,7 +33,7 @@
     a) Instruction \
     b) Agent \
     c) ***"Software (Riktig)"*** \
-    d) All of the above 
+    d) All of the above .
 
 ##### Short Answer
 1. The PERSONAL COMPUTER was invented at Xerox's Palo Alto Research Center in 1973.
