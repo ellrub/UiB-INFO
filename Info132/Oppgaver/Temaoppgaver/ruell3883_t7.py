@@ -24,3 +24,5 @@ close_button = Button(frame, text="Farvel", command = window.destroy)
 close_button.pack()
 
 window.mainloop()
+
+# asdasdas
