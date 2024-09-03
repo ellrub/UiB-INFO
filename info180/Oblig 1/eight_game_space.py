@@ -149,8 +149,8 @@ if __name__ == "__main__":
 
     space = EightGameSpace()
     # various start nodes to try out
-    # solution = space.solve(EightGameNode([[1,2,3],[4,5,6],[7,8,0]]))
-    solution = space.solve(EightGameNode([[1,2,3],[4,0,6],[7,5,8]]))
+    solution = space.solve(EightGameNode([[1,2,3],[4,5,6],[7,8,0]]))
+    # solution = space.solve(EightGameNode([[1,2,3],[4,0,6],[7,5,8]]))
     # solution = space.solve(EightGameNode([[0,1,2],[3,4,5],[6,7,8]]))
     # solution = space.solve(EightGameNode([[1,2,3],[7,4,5],[8,0,6]]))
 

@@ -4,6 +4,7 @@
 '''
 import copy
 
+
 class EightGameNode:
     '''
     A representation of an eight game node with the board as a 3x3 list (array/table) with
@@ -69,15 +70,19 @@ class EightGameNode:
         :return: a new board position or None if not possible
         '''
         # Replace 'return None' with you own code
-        if self.empty["col"] == 0:
+        new_board = copy.deepcopy(self)
+
+        if new_board.empty["col"] == 0:
             return None
         else:
-            new_node = copy.deepcopy(self)
-            
-            self.board[self.empty["row"]][self.empty["col"]], self.board[self.empty["row"]][self.empty["col"] - 1] = self.board[self.empty["row"]][self.empty["col"] - 1], self.board[self.empty["row"]][self.empty["col"]]
-            self.empty["col"] -= 1
 
-            return new_node
+            row = new_board.empty["row"]
+            col = new_board.empty["col"]
+            
+            new_board.board[row][col], new_board.board[row][col - 1] = new_board.board[row][col - 1], new_board.board[row][col]
+            new_board.empty["col"] -= 1
+
+            return new_board
 
     def move_right(self):
         '''
@@ -85,14 +90,19 @@ class EightGameNode:
         :return: a new board position or None if not possible
         '''
         # Replace 'return None' with you own code
-        if self.empty["col"] == 0:
+        new_board = copy.deepcopy(self)
+
+        if new_board.empty["col"] == 2:
             return None
         else:
-            
-            self.board[self.empty["row"]][self.empty["col"]], self.board[self.empty["row"]][self.empty["col"] + 1] = self.board[self.empty["row"]][self.empty["col"] + 1], self.board[self.empty["row"]][self.empty["col"]]
-            self.empty["col"] += 1
 
-            return self.board
+            row = new_board.empty["row"]
+            col = new_board.empty["col"]
+            
+            new_board.board[row][col], new_board.board[row][col + 1] = new_board.board[row][col + 1], new_board.board[row][col]
+            new_board.empty["col"] += 1
+
+            return new_board
 
     def move_up(self):
         '''
@@ -100,14 +110,19 @@ class EightGameNode:
         :return: a new board position or None if not possible
         '''
         # Replace 'return None' with you own code
-        if self.empty["row"] == 0:
+        new_board = copy.deepcopy(self)
+
+        if new_board.empty["row"] == 0:
             return None
         else:
-            
-            self.board[self.empty["row"]][self.empty["col"]], self.board[self.empty["row"] - 1][self.empty["col"]] = self.board[self.empty["row"] - 1][self.empty["col"]], self.board[self.empty["row"]][self.empty["col"]]
-            self.empty["row"] -= 1
 
-            return self.board
+            row = new_board.empty["row"]
+            col = new_board.empty["col"]
+            
+            new_board.board[row][col], new_board.board[row - 1][col] = new_board.board[row - 1][col], new_board.board[row][col]
+            new_board.empty["row"] -= 1
+
+            return new_board
 
     def move_down(self):
         '''
@@ -115,14 +130,19 @@ class EightGameNode:
         :return: a new board position or None if not possible
         '''
         # Replace 'return None' with you own code
-        if self.empty["row"] == 0:
+        new_board = copy.deepcopy(self)
+
+        if new_board.empty["row"] == 2:
             return None
         else:
-            
-            self.board[self.empty["row"]][self.empty["col"]], self.board[self.empty["row"] + 1][self.empty["col"]] = self.board[self.empty["row"] + 1][self.empty["col"]], self.board[self.empty["row"]][self.empty["col"]]
-            self.empty["row"] += 1
 
-            return self.board
+            row = new_board.empty["row"]
+            col = new_board.empty["col"]
+            
+            new_board.board[row][col], new_board.board[row + 1][col] = new_board.board[row + 1][col], new_board.board[row][col]
+            new_board.empty["row"] += 1
+
+            return new_board
 
     def __str__(self):
         '''
@@ -196,11 +216,11 @@ if __name__ == "__main__":
     '''
     s = EightGameNode([[0,1,2],[3,4,5],[6,7,8]])
     print(s)
-    s.move_right()
+    s = s.move_right()
     print(s)
-    s.move_left()
+    s = s.move_left()
     print(s)
-    s.move_down()
+    s = s.move_down()
     print(s)
-    s.move_up()
+    s = s.move_up()
     print(s)
