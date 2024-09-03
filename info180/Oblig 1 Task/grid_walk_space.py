@@ -10,7 +10,7 @@ from queue import Queue, LifoQueue, PriorityQueue
 from grid_walk_node import GridWalkNode
 from grid_walk_path import GridWalkPath
 from make_grid import is_goal
-from zero_h import ZeroH
+from zero_h import ZeroH, FirstHeuristic
 from heuristic import Heuristic
 
 
@@ -159,8 +159,18 @@ class GridWalkSpace:
 if __name__ == '__main__':
 
     print("Breidde-først")
-    sp = GridWalkSpace(Queue())
+    sp = GridWalkSpace(Queue(), FirstHeuristic())
     sp.solve()
+
+
+    print("\nDjupn-først")
+    de = GridWalkSpace(LifoQueue())
+    de.solve()
+    
+    
+    print("\nBest-først")
+    be = GridWalkSpace(PriorityQueue())
+    be.solve()
 
 
 
