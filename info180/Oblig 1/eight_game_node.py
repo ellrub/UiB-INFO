@@ -69,7 +69,7 @@ class EightGameNode:
         Moving the space to left
         :return: a new board position or None if not possible
         '''
-        # Replace 'return None' with you own code
+        
         new_board = copy.deepcopy(self)
 
         if new_board.empty["col"] == 0:
@@ -89,7 +89,7 @@ class EightGameNode:
         Moving the space to right
         :return: a new board position or None if not possible
         '''
-        # Replace 'return None' with you own code
+        
         new_board = copy.deepcopy(self)
 
         if new_board.empty["col"] == 2:
@@ -109,7 +109,7 @@ class EightGameNode:
         Moving the space up
         :return: a new board position or None if not possible
         '''
-        # Replace 'return None' with you own code
+        
         new_board = copy.deepcopy(self)
 
         if new_board.empty["row"] == 0:
@@ -129,7 +129,7 @@ class EightGameNode:
         Moving the space down
         :return: a new board position or None if not possible
         '''
-        # Replace 'return None' with you own code
+        
         new_board = copy.deepcopy(self)
 
         if new_board.empty["row"] == 2:
@@ -189,25 +189,41 @@ class EightGameNode:
                 b[2][1]*8 +
                 b[2][2]*9)
 
-    def hamming_distance(self,other):
+    def hamming_distance(self, other):
         '''
         Returns the number of tiles which are not correctly placed compared to other (which may be the goal)
         :param other: the other board to compare to
         :return: the number of tiles which are not correctly placed
         '''
         dist = 0
-        # Your code for measuring so called Hamming distance
+        for i in range(3):
+            for j in range(3):
+                if other.board[i][j] != self.board[i][j]:
+                    dist += 1
         return dist
 
-    def manhattan_distance(self,other):
+    def manhattan_distance(self, other):
         '''
         Returns the sum of the number of moves a tile must do to move from where it is in self to
         where it is in the other board if there were no other tiles on the board
         :param other: the other board to compare to
         :return: the sum of the number of moves for each tile
+
+        fra PDF
+        manhattan(self,other) reknar ut summen av talet på flytt kvar brikke må gjere for å komme
+        til rett posisjon om vi hadde gjort flyttingane på eit tomt brett (Manhattan-distanse)
         '''
+
         dist = 0
-        # Your code for measuring so called Manhattan distance
+        for i in range(3):
+            for j in range(3):
+                tile = self.board[i][j]
+                if tile != 0:
+                    for tile_i in range(3):
+                        for tile_j in range(3):
+                            if other.board[tile_i][tile_j] == tile:
+                                dist += abs(i - tile_i) + abs(j - tile_j)
+                                break
         return dist
 
 if __name__ == "__main__":

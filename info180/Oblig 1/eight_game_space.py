@@ -45,9 +45,9 @@ class EightGameSpace:
         :return: the h-value
         '''''
         # Here you can select h-functions by commenting out the ones you do not want
-        return 0 # no heuristic is used, implies breadth-first-search
-#        return node.hamming_distance(self.goal) # choose a hamming distance heuristic
-#        return node.manhattan_distance(self.goal) # choose a manhattan-distance heuristic
+        # return 0 # no heuristic is used, implies breadth-first-search
+        # return node.hamming_distance(self.goal) # choose a hamming distance heuristic
+        return node.manhattan_distance(self.goal) # choose a manhattan-distance heuristic
 
     def __init__(self, the_goal = DEFAULT_GOAL):
         '''
@@ -149,15 +149,36 @@ if __name__ == "__main__":
 
     space = EightGameSpace()
     # various start nodes to try out
-    solution = space.solve(EightGameNode([[1,2,3],[4,5,6],[7,8,0]]))
+    # solution = space.solve(EightGameNode([[1,2,3],[4,5,6],[7,8,0]]))
+    # Frontier size: 1 - Nodes visited: 1 - Solution length: 1
+    # HAMMING - Frontier size: 1 - Nodes visited: 1 - Solution length: 1
+    # MANHATTAN - Frontier size: 1 - Nodes visited: 1 - Solution length: 1
+
     # solution = space.solve(EightGameNode([[1,2,3],[4,0,6],[7,5,8]]))
+    # Frontier size: 14 - Nodes visited: 12 - Solution length: 3
+    # HAMMING - Frontier size: 6 - Nodes visited: 3 - Solution length: 3
+    # MANHATTAN - Frontier size: 6 - Nodes visited: 3 - Solution length: 3
+
     # solution = space.solve(EightGameNode([[0,1,2],[3,4,5],[6,7,8]]))
+    # Frontier size: 55548 - Nodes visited: 83360 - Solution length: 23
+    # HAMMING - Frontier size: 6298 - Nodes visited: 6532 - Solution length: 23
+    # MANHATTAN - Frontier size: 771 - Nodes visited: 821 - Solution length: 23
+
     # solution = space.solve(EightGameNode([[1,2,3],[7,4,5],[8,0,6]]))
+    # Frontier size: 70 - Nodes visited: 58 - Solution length: 6
+    # HAMMING - Frontier size: 12 - Nodes visited: 7 - Solution length: 6
+    # MANHATTAN - Frontier size: 11 - Nodes visited: 6 - Solution length: 6
 
     # These following two have the longest solution - 32 moves -
     # and may take some minutes even with the Manhattan heuristic
     # solution = space.solve(EightGameNode([[8,6,7],[2,5,4],[3,0,1]]))
-    # solution = space.solve(EightGameNode([[6,4,7],[8,5,0],[3,2,1]]))
+    # HAMMING - Frontier size: 64325 - Nodes visited: 125092 - Solution length: 32
+    # MANHATTAN - Frontier size: 12303 - Nodes visited: 11796 - Solution length: 32
+
+    solution = space.solve(EightGameNode([[6,4,7],[8,5,0],[3,2,1]]))
+    # HAMMING - Frontier size: 64423 - Nodes visited: 125146 - Solution length: 32
+    # MANHATTAN - Frontier size: 12459 - Nodes visited: 12032 - Solution length: 32
+
 
     # Print the solution and the length of the solution
     if solution != None:
