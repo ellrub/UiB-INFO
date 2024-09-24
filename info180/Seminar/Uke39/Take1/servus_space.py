@@ -6,6 +6,7 @@ from queue import LifoQueue
 import copy
 
 import servus_state
+from servus_state import ServusState
 
 
 class ServusSpace:
@@ -161,7 +162,7 @@ class ServusSpace:
 
 
 if __name__ == "__main__":
-    start = {"loc":'K',"hands": [], "t1_full":1,"t1_empty":1,"t2_full":1,"t2_empty":1, "t1_snack": servus_state.EMPTY_SNACK, "t2_snack": servus_state.NO_SNACK}
+    start = {"loc":'K',"hands": [], "t1_full":2,"t1_empty":1,"t2_full":0,"t2_empty":2, "t1_snack": servus_state.EMPTY_SNACK, "t2_snack": servus_state.NO_SNACK}
     # an initial state
 
     space = ServusSpace()

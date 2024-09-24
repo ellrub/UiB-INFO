@@ -83,7 +83,9 @@ class ServusState:
         # precondition
         if self.servus_loc == 'K' and EMPTY_GLASS not in self.servus_hands and EMPTY_SNACK not in self.servus_hands:
             # effect (missing)
-            return None
+            new_state = deepcopy(self)
+            new_state.servus_loc = "T1"
+            return new_state
         else:
             return None
 
@@ -108,7 +110,7 @@ class ServusState:
         :return: a new state if action is legal
         '''
         # precondition missing - replace False with precondition
-        if False:
+        if self.servus_loc == 'T1' and FULL_SNACK not in self.servus_hands and FULL_GLASS not in self.servus_hands:
 
             # effect
             new_state = deepcopy(self)
@@ -153,10 +155,12 @@ class ServusState:
         :return: a new state if action is legal
         '''
         # precondition missing - replace False with precondition
-        if False:
+        if self.servus_loc == 'T2':
 
-            # effect (missing)
-            return None
+            # effect
+            new_state = deepcopy(self)
+            new_state.servus_loc = 'T1'
+            return new_state
         else:
             return None
 
@@ -166,7 +170,10 @@ class ServusState:
         :return: a new state if action is legal
         '''
         # precondition missing - replace False with precondition
-        if False:
+        if (self.servus_loc == 'K' and
+                len(self.servus_hands) < 2 and
+                EMPTY_GLASS not in self.servus_hands and
+                EMPTY_SNACK not in self.servus_hands):
 
             # effect
             new_state = deepcopy(self)
@@ -201,9 +208,10 @@ class ServusState:
                 len(self.servus_hands) < 2 and
                 EMPTY_GLASS not in self.servus_hands and
                 EMPTY_SNACK not in self.servus_hands):
-
-            # effect (missing)
-            return None
+            # effect
+            new_state = deepcopy(self)
+            new_state.servus_hands.append(FULL_SNACK)
+            return new_state
         else:
             return None
 
@@ -213,10 +221,15 @@ class ServusState:
         :return: a new state if action is legal
         '''
         # precondition missing - replace False with precondition
-        if False:
+        if (self.servus_loc == 'K' and
+                FULL_SNACK in self.servus_hands and
+                self.t1_snack + self.t1_empty < 3):
 
-            # effect (missing)
-            return None
+            # effect
+            new_state = deepcopy(self)
+            new_state.servus_hands.remove(FULL_SNACK)
+            new_state.t1_snack = new_state.t1_snack + 1
+            return new_state
         else:
             return None
 
@@ -262,12 +275,14 @@ class ServusState:
         :return: a new state if action is legal
         '''
         # precondition missing - replace False with precondition
-        if False:
+        if (self.servus_loc == 'T2' and
+                FULL_GLASS in self.servus_hands and
+                self.t1_full + self.t1_empty < 3):
 
             # effect
             new_state = deepcopy(self)
             new_state.servus_hands.remove(FULL_GLASS)
-            new_state.t2_full = new_state.t2_full + 1
+            new_state.t1_full = new_state.t1_full + 1
             return new_state
         else:
             return None
@@ -281,9 +296,11 @@ class ServusState:
         if (self.servus_loc == 'T2' and
                 len(self.servus_hands) < 2 and
                 self.t2_empty > 0):
-
-            # effect (missing)
-            return None
+            # effect
+            new_state = deepcopy(self)
+            new_state.servus_hands.append(EMPTY_GLASS)
+            new_state.t2_empty = new_state.t2_empty - 1
+            return new_state
         else:
             return None
 
@@ -293,10 +310,14 @@ class ServusState:
         :return: a new state if action is legal
         '''
         # precondition missing - replace False with precondition
-        if False:
-
-            # effect (missing)
-            return None
+        if (self.servus_loc == 'T1' and
+                len(self.servus_hands) < 2 and
+                self.t1_snack == FULL_SNACK):
+            # effect
+            new_state = deepcopy(self)
+            new_state.servus_hands.append(FULL_SNACK)
+            new_state.t1_snack = NO_SNACK
+            return new_state
         else:
             return None
 
@@ -306,10 +327,14 @@ class ServusState:
         :return: a new state if action is legal
         '''
         # precondition missing - replace False with precondition
-        if False:
-
-            # effect (missing)
-            return None
+        if (self.servus_loc == 'T1' and
+                FULL_SNACK in self.servus_hands and
+                self.t1_snack == NO_SNACK):
+            # effect
+            new_state = deepcopy(self)
+            new_state.servus_hands.remove(FULL_SNACK)
+            new_state.t1_snack = FULL_SNACK
+            return new_state
         else:
             return None
 
@@ -319,10 +344,14 @@ class ServusState:
         :return: a new state if action is legal
         '''
         # precondition missing - replace False with precondition
-        if False:
-
-            # effect (missing)
-            return None
+        if (self.servus_loc == 'T2' and
+                len(self.servus_hands) < 2 and
+                self.t1_snack == FULL_SNACK):
+            # effect
+            new_state = deepcopy(self)
+            new_state.servus_hands.append(FULL_SNACK)
+            new_state.t1_snack = NO_SNACK
+            return new_state
         else:
             return None
 
@@ -335,9 +364,11 @@ class ServusState:
         if (self.servus_loc == 'T2' and
                 FULL_SNACK in self.servus_hands and
                 self.t2_snack == NO_SNACK):
-
-            # effect (missing)
-            return None
+            # effect
+            new_state = deepcopy(self)
+            new_state.servus_hands.remove(FULL_SNACK)
+            new_state.t2_snack = FULL_SNACK
+            return new_state
         else:
             return None
 
