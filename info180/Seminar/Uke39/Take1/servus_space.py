@@ -20,6 +20,7 @@ class ServusSpace:
         # a hash set of states that have already been visited in the search space
         self.best = None
         self.frontier = LifoQueue()
+        self.count = 0
         # the search frontier is a stack (depth-first-search here)
 
     def is_goal(self,path):
@@ -32,13 +33,15 @@ class ServusSpace:
         # path is a list of pairs of (action,state).
         # [-1] gets the last pair.
         # [1] gets the last state
+        self.count += 1
+        print(self.count, end="\r")
 
         if len(path) == 1:
             # a special case. If there is nothing to deliver or pickup at tables we are finished
             # in that case we are already in a goal state so we do not need to move
             if (state.t1_full == 3 and state.t2_full == 3 and
                 state.t1_empty == 0 and state.t2_empty == 0 and
-                state.t1_snack == servus_state.FULL_SNACK and state.t2_snack == servus_state.FULL_SNACK):
+                state.t1_snack == 1 and state.t2_snack == 1):
                 return True
             else:
                 return False
@@ -49,7 +52,8 @@ class ServusSpace:
             return False
         if len(state.servus_hands) > 0:
             return False
-        return True
+        if self.count >= 5000:
+            return True
 
     def solve(self,start):
         '''
@@ -162,7 +166,7 @@ class ServusSpace:
 
 
 if __name__ == "__main__":
-    start = {"loc":'K',"hands": [], "t1_full":2,"t1_empty":1,"t2_full":0,"t2_empty":2, "t1_snack": servus_state.EMPTY_SNACK, "t2_snack": servus_state.NO_SNACK}
+    start = {"loc":'K',"hands": [], "t1_full":1,"t1_empty":1,"t2_full":1,"t2_empty":1, "t1_snack": servus_state.EMPTY_SNACK, "t2_snack": servus_state.NO_SNACK}
     # an initial state
 
     space = ServusSpace()
