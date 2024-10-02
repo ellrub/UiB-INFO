@@ -16,7 +16,7 @@ from sklearn.svm import NuSVC
 
 ...
 # Load dataset
-url = "/Users/ruben/Development/UiB-INFO/info180/Oblig2/data/iris.csv"
+url = "/Users/ruben/Development/UiB-INFO/info180/Oblig2/data/party_data.csv"
 names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
 dataset = read_csv(url, names=names)
 
