@@ -6,6 +6,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.preprocessing import OrdinalEncoder
+from sklearn.neural_network import MLPClassifier
 
 # Load the dataset
 # url = 'D:/Web/Projects/UiB-INFO/info180/Oblig2/data/party_data.csv' # windows
@@ -103,3 +104,26 @@ def train_evaluate_dt(criterion):
 # Train and evaluate Decision Tree model with different criteria
 train_evaluate_dt('gini')
 train_evaluate_dt('entropy')
+
+# ============ Neural Network ============ #
+def train_evaluate_mlp(hidden_layer_sizes):
+    model = MLPClassifier(hidden_layer_sizes = hidden_layer_sizes, max_iter = 10000, random_state = 1, learning_rate_init = 0.01, early_stopping = True)
+    model.fit(X_train_lr, y_train_lr)
+    y_pred_train = model.predict(X_train_lr)
+    y_pred_test = model.predict(X_test_lr)
+    accuracy_train = accuracy_score(y_train_lr, y_pred_train)
+    accuracy_test = accuracy_score(y_test_lr, y_pred_test)
+    conf_matrix = confusion_matrix(y_test_lr, y_pred_test)
+    precision = precision_score(y_test_lr, y_pred_test, pos_label='ok')
+    print(f'MLP (hidden_layer_sizes) = {hidden_layer_sizes}):')
+    print(f'  Accuracy (Train): {accuracy_train}')
+    print(f'  Accuracy (Test): {accuracy_test}')
+    print(f'  Confusion Matrix:\n{conf_matrix}')
+    print(f'  Precision (ok): {precision}')
+    print(f'  Overfitting: {accuracy_train - accuracy_test}\n')
+
+    # Train and evaluate MLP model with different hidden layer sizes
+train_evaluate_mlp((15, 10, 6))
+train_evaluate_mlp((10, 4))
+train_evaluate_mlp((10, 5, 2))
+train_evaluate_mlp((20, 10, 5))
