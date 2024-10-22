@@ -1,15 +1,15 @@
 from pandas import read_csv, get_dummies
-from pandas.plotting import scatter_matrix
 from matplotlib import pyplot as plt
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import classification_report, confusion_matrix, accuracy_score, precision_score
+from sklearn.metrics import confusion_matrix, accuracy_score, precision_score
 from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.preprocessing import OrdinalEncoder
 
 # Load the dataset
-url = 'D:/Web/Projects/UiB-INFO/info180/Oblig2/data/party_data.csv'
+# url = 'D:/Web/Projects/UiB-INFO/info180/Oblig2/data/party_data.csv' # windows
+url = '/Users/ruben/Development/UiB-INFO/info180/Oblig2/data/party_data.csv'
 names = ['gender', 'age', 'study', 'activity', 'music', 'is dancer', 'ok guest']
 dataset = read_csv(url, names = names)
 
@@ -64,7 +64,7 @@ X_train_lr, X_test_lr, y_train_lr, y_test_lr = train_test_split(X_lr, y_lr, test
 
 # Function to train and evaluate Logistic Regression model
 def train_evaluate_lr(penalty):
-    model = LogisticRegression(penalty=penalty, solver='liblinear' if penalty else 'newton-cg')
+    model = LogisticRegression(penalty = penalty, solver = 'liblinear' if penalty else 'newton-cg')
     model.fit(X_train_lr, y_train_lr)
     y_pred_train = model.predict(X_train_lr)
     y_pred_test = model.predict(X_test_lr)
