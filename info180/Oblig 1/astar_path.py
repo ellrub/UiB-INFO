@@ -1,6 +1,6 @@
 '''
     Class representing a path in a search tree and its cost
-    Written by Bjornar Tessem
+    Written by Bjornar Tessem, Teacher at UiB
 '''
 
 
