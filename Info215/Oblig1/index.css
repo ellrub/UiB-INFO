@@ -10,22 +10,55 @@ html, body {
 }
 
 nav {
-    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    background-color: rgb(57, 123, 228);
+    color: white;
+    height: 200px;
 }
 
 nav div {
-    display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 nav div h2 {
-    font-size: 4rem;
+    font-size: 3rem;
     margin: 0px;
+    font-weight: 500;
 }
 
 nav div p {
     font-size: 1.5rem;
     margin-top: 0px;
     margin-bottom: 0px;
+}
+
+img {
+    height: 100px;
+    width: 150px;
+}
+
+main {
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.section_one, .section_two {
+    margin: 20px;
+    border: 1px solid black;
+    height: 450px;
+    width: 450px;
+
+    padding: 10px;
+}
+
+footer {
+    height: 100px;
+    background-color: rgb(57, 123, 228);
+    margin-top: 50px;
+}
+
+.flex {
+    display: flex;
 }

@@ -1,37 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title>Oblig 1</title>
-</head>
-<body>
-    <nav>
-        <svg width="228" height="185">
-            <!-- oppe til venste -->
-            <rect x="10" y="20" height="54" width="54" style="stroke: #ce0000; fill: #ce0000"/>
-
-            <!-- nede til venstre -->
-            <rect x="10" y="110" height="54" width="54" style="stroke: #ce0000; fill: #ce0000"/>
-
-            <!-- oppe til høyre -->
-            <rect x="100" y="20" height="54" width="108" style="stroke: #ce0000; fill: #ce0000"/>
-
-            <!-- nede til høyre -->
-            <rect x="100" y="110" height="54" width="108" style="stroke: #ce0000; fill: #ce0000"/>
-
-            <!-- horisontal blå linje -->
-            <rect x="10" y="83" height="18" width="198" style="stroke: #001f64; fill: #001f64"/>
-
-            <!-- vertikal blå linje -->
-            <rect x="73" y="20" height="144" width="18" style="stroke: #001f64; fill: #001f64"/>
-        </svg>
-        <div>
-            <h2>INFO215 Oblig 1</h2>
-            <p>This is a website containing some of the assignments given in Oblig 1, 2025</p>
-        </div>
-    </nav>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="index.css">
+        <title>Oblig 1</title>
+    </head>
+    <body>
+        <nav class="flex">
+            <svg width="74" height="110">
+                <!-- oppe til venste -->
+                <rect x="10" y="20" height="108" width="54" style="stroke: #8d3333; fill: #ce0000"/>
+            </svg>
+            <div class="flex">
+                <h2>INFO215 Oblig 1</h2>
+                <p>This is a website containing some of the assignments given in Oblig 1, 2025</p>
+            </div>
+        </nav>
+        <main class="flex">
+            <div class="section_one">
+                <ul>
+                    <li><a href="https://www4.uib.no/en/courses/info215">Info215</a></li>
+                    <li><a href="https://www4.uib.no/en/courses/info263">Info263</a></li>
+                    <li><a href="https://www4.uib.no/en/courses/info284">Info284</a></li>
+                </ul>
+                <div>
+                    <img src="./bilder/Colorful_Code_Photo.jpg" alt="Image by Jakub Żerdzicki from Unsplash.com">
+                    <img src="./bilder/Machine Cutting Close Up.jpg" alt="Image by h heyerlein from Unsplash.com">
+                    <img src="./bilder/Person with Paint Photo.jpg" alt="Image by Markus Spiske from Unsplash.com">
+                </div>
+            </div>
+            <div class="section_two">
+                <table>
+                    <tr>
+                        <th>Kurs Navn</th>
+                        <th>Kurs Kode</th>
+                        <th>Seminar Gruppe</th>
+                    </tr>
+                    <tr>
+                        <td>Web Science</td>
+                        <td>Info215</td>
+                        <td>Gruppe 5</td>
+                    </tr>
+                    <tr>
+                        <td>Interaksjonsdesign</td>
+                        <td>Info263</td>
+                        <td>Gruppe 5</td>
+                    </tr>
+                    <tr>
+                        <td>Machine Learning</td>
+                        <td>Info284</td>
+                        <td>Gruppe 4</td>
+                    </tr>
+                </table>
+            </div>
+        </main>
+        <footer></footer>
+    </body>
 </html>
