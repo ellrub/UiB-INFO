@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>My Bookstore</h1>
+        <ul>
+            {% for book in books %}
+                <li>
+                    <strong>Title: </strong>{{book.title}}<br>
+                    <strong>Author: </strong>{{book.author}}<br>
+                    <strong>Year of Release: </strong>{{book.year_of_release}}<br>
+                    -----------
+                </li>
+            {% endfor %}
+        </ul>
+        
+    </body>
+</html>
