@@ -10,6 +10,7 @@ for td in tds:
     print(td.parent.get_text())
 
 '''
+Answer:
 The colum containing the data about Award and Date of ceremony always belongs to the
 first tablerow and just spans accross multiple rows so that it looks correct visually,
 but this mean that the data only lives in the first colum in the series.
