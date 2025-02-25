@@ -3,7 +3,7 @@ from scrapy.spiders import CrawlSpider, Rule
 from wikiSpider.items import VergeReview
 
 class VergeReviewSpider(CrawlSpider):
-    name = 'oblig3'
+    name = 'vergeReview'
 
     allowed_domains = ['theverge.com']
     start_urls = ['https://www.theverge.com/reviews']

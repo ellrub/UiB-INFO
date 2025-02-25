@@ -11,6 +11,7 @@ BOT_NAME = "wikiSpider"
 
 SPIDER_MODULES = ["wikiSpider.spiders"]
 NEWSPIDER_MODULE = "wikiSpider.spiders"
+CLOSESPIDER_PAGECOUNT = 20
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
