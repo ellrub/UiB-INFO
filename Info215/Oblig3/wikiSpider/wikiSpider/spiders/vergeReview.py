@@ -11,7 +11,7 @@ class VergeReviewSpider(CrawlSpider):
     
 
     rules = [
-        Rule(LinkExtractor(allow = r"https://www\.theverge\.com/\d+/[^/]+"),
+        Rule(LinkExtractor(allow = r"https://www\.theverge\.com/\d+/[^/]+$"),
              callback = 'parse_items', follow = True)
         ]
     
