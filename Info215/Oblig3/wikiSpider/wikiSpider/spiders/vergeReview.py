@@ -11,16 +11,21 @@ class VergeReviewSpider(CrawlSpider):
     
 
     rules = [
-        Rule(LinkExtractor(allow = r"https://www\.theverge\.com/\d+/[^/]+$"),
+        Rule(LinkExtractor(allow = r"https://www.theverge.com/\d+/[^/]+$"),
              callback = 'parse_items', follow = True)
         ]
     
     def parse_items(self, response):
         root_domain = 'https://www.theverge.com'
+        title = response.xpath('//h1/text()').extract_first()
+        author_name = response.xpath("//span/a/text()").extract_first()
+        author_profile_link = urljoin(root_domain, response.xpath("//span/a/@href").extract_first())
         verge_review = VergeReview()
         verge_review['url'] = response.url
-        verge_review['title'] = response.xpath('//h1/text()').extract_first()
-        verge_review['author_name'] = response.xpath("//span[contains(@class, '_114qu8c2')]/a/text()").extract_first()
-        verge_review['author_profile_link'] = urljoin(root_domain, response.xpath("//span[contains(@class, '_114qu8c2')]/a/@href").extract_first())
 
-        yield verge_review
+        if title is not None and author_name is not None:
+            verge_review['title'] = title
+            verge_review['author_name'] = author_name
+            verge_review['author_profile_link'] = author_profile_link
+
+            yield verge_review
