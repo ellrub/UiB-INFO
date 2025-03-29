@@ -21,7 +21,7 @@ class VergeReviewSpider(CrawlSpider):
         verge_review['url'] = response.url
         verge_review['title'] = response.xpath('//h1/text()').extract_first()
         verge_review['author_name'] = response.xpath("//span/a/text()").extract_first()
-        verge_review['author_profile_link'] = urljoin(root_domain, response.xpath("//span/a/@href").extract_first())
+        verge_review['author_profile_link'] = urljoin(root_domain, response.xpath("//span/span/a/@href").extract_first())
 
         if verge_review['title'] is not None and verge_review['author_name'] is not None:
             yield verge_review
