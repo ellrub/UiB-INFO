@@ -79,9 +79,9 @@
             g.append('path')
                 .attr('d', pathData); -->
             <script>
-                let dataset = [5, 10, 15, 20, 25];
-                    let w = 200;
-                    let h = 100;
+                let dataset = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50];
+                    let w = 500;
+                    let h = 200;
                     let barPadding = 1;
 
                     let svg = d3.select("body")
@@ -94,8 +94,8 @@
                         .enter()
                         .append("rect")
                         .attr("x", function(d, i) {
-                        return i * (w / dataset.length);
-                        })
+                        return i * (w / dataset.length); //
+                        }) 
 
                         .attr("y", function(d) {
                         return h - d*4; //Height minus data value
