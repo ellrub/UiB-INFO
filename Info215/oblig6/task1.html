@@ -3,11 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="./icons/animated/cloudy-day-1.svg">
         <script 
             type="text/javascript"
             src="https://d3js.org/d3.v4.min.js">
         </script>
-        <title>Document</title>
+        <title>Weather Forecast</title>
     </head>
     <body>
         <div id="container"></div>
@@ -23,35 +24,31 @@
                     temp: +data.Temperature,
                     prec: +data.Precipitation
                 }; })
-                .get(function(error, rows) { console.log(rows); 
-
-                csvData = rows;
-                drawWeatherChart(csvData);
-            });
+                .get(function(error, rows) { 
+                    
+                    drawWeatherChart(rows);
+                });
             
             function drawWeatherChart(data) {
-                const width = 640;
-                const height = 400;
-                const marginTop = 20;
-                const marginRight = 20;
+                const width = 840;
+                const height = 700;
+                const marginTop = 70;
+                const marginRight = 70;
                 const marginBottom = 30;
-                const marginLeft = 40;
+                const marginLeft = 50;
 
-
-                const day = "./icons/animated/day.svg";
-
-                const precipitationIcons = {
+                const weatherIcons = {
                     none: {
-                        day: "./icons/animated/cloudy-day-3.svg",
-                        night: "./icons/animated/cloudy-night-3.svg",
+                        day: "./icons/cloudy-day-3.svg",
+                        night: "./icons/cloudy-night-3.svg",
                     },
                     low: {
-                        day: "./icons/animated/rainy-4.svg",
-                        night: "./icons/animated/rainy-4.svg",
+                        day: "./icons/rainy-4.svg",
+                        night: "./icons/rainy-4.svg",
                     },
                     high: {
-                        day: "./icons/animated/rainy-6.svg",
-                        night: "./icons/animated/rainy-6.svg",
+                        day: "./icons/rainy-6.svg",
+                        night: "./icons/rainy-6.svg",
                     }                    
                 }
 
@@ -59,31 +56,26 @@
                 times = data.map(row => row.time);
                 temps = data.map(row => row.temp);
                 precs = data.map(row => row.prec);
-            
-                console.log("Dates", dates)
-                console.log("Times", times)
-                console.log("Temps", temps)
-                console.log("Precs", precs)
 
                 function getTime(time) {
                     let hour = parseInt(time.split(":")[0], 10);
                     return hour >= 6 && hour < 18 ? "day" : "night";
                 }
 
-                function getPrecipitation(prec, time) {
+                function getWeatherIcon(prec, time) {
                     let precTime = getTime(time);
-                    if (prec == 0) return precipitationIcons.none[precTime];
-                    if (prec <= 0.6) return precipitationIcons.low[precTime];
-                    if (prec > 0.6) return precipitationIcons.high[precTime];
+                    if (prec == 0) return weatherIcons.none[precTime];
+                    if (prec <= 0.6) return weatherIcons.low[precTime];
+                    if (prec > 0.6) return weatherIcons.high[precTime];
                 }
 
                 const x = d3.scaleTime()
-                    .domain([new Date("2025-01-01T00:00:00"), new Date("2025-01-02T00:00:00")])
+                    .domain([new Date("2025-04-28T00:00:00"), new Date("2025-04-29T00:00:00")])
                     .range([marginLeft, width - marginRight]);
     
                 // Declare the y (vertical position) scale.
                 const y = d3.scaleLinear()
-                    .domain([0, 16])
+                    .domain([0, 20])
                     .range([height - marginBottom, marginTop]);
     
                 // Create the SVG container.
@@ -91,42 +83,47 @@
                     .attr("width", width)
                     .attr("height", height);
 
-                
-    
-                
-    
-                let datasetX = [6, 10, 15, 20];
-                let datasetY = [2, 6, 10, 14];
+                const datasetX = times.map(time => {
+                const clock = time.split(':');
+                    return parseInt(clock[0], 10);
+                });
+
+                const datasetY = temps.map(temp => {
+                    return parseInt(temp);
+                });
     
                 let dataset = datasetX.map((xValue, i) => ({ x: xValue, y: datasetY[i]}))
     
                 // Add the x-axis.
                 svg.append("g")
-                    .attr("transform", `translate(0,${height - marginBottom})`)
-                    .call(d3.axisBottom(x).ticks(d3.timeHour.every(2)).tickFormat(d3.timeFormat("%H")));
+                    .attr("transform", `translate(60,${height - marginBottom})`)
+                    .call(d3.axisBottom(x)
+                        .ticks(d3.timeHour.every(2))
+                        .tickFormat(d3.timeFormat("%H"))
+                        .tickSize(-height + marginTop + marginBottom - 60)
+                    );
     
                 // Add the y-axis.
                 svg.append("g")
-                    .attr("transform", `translate(${marginLeft},0)`)
-                    .call(d3.axisLeft(y));
-    
+                    .attr("class", "grid")
+                    .attr("transform", `translate(${marginLeft},-60)`)
+                        .call(d3.axisLeft(y).tickSize(-width + marginLeft + marginRight - 60)
+                    );
+
                 svg.selectAll(".data-image")
                     .data(dataset)
                     .enter()
                     .append("image")
                     .attr("class", "data-image")
-                    .attr("xlink:href", day)
-                    .attr("x", d => x(new Date(`2025-01-01T${String(d.x).padStart(2, '0')}:00:00`)) - 40)
-                    .attr("y", d => y(d.y) - 40)
-                    .attr("width", 80)
-                    .attr("height", 80);
-    
+                    .attr("xlink:href", (d, i) => getWeatherIcon(precs[i], times[i]))
+                    .attr("x", d => x(new Date(`2025-04-28T${String(d.x).padStart(2, '0')}:00:00`)) + 35)
+                    .attr("y", d => y(d.y) - 85)
+                    .attr("width", 55)
+                    .attr("height", 55);
     
                 // Append the SVG element.
                 container.append(svg.node());
             }
-            
-
         </script>
     </body>
 </html>
