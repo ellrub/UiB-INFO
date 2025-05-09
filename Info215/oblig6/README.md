@@ -1,6 +1,12 @@
 # D3 Program
 ---
-Start by declaring a global variable so that the
+Starts by loading the csv and converting it to an object for easy access.
+
+`drawWeatherChart()` starts by defining dimensions and margins. We then set icons depending on day and night, as well as percipitation.
+
+Map the data in the object and assign them to appropriate variables.
+
+Draw the grid. Decided to offset the grid to not get icons overlappying numbers on the X and Y axis.
 
 # Data
 ---
