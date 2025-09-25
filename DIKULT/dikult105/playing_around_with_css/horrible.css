@@ -1,0 +1,530 @@
+/* HORRIBLE CSS - DO NOT USE IN REAL PROJECTS! */
+
+/* Base styles that are already questionable */
+* {
+    /* Don't reset anything - let chaos reign! */
+    box-sizing: content-box; /* Intentionally bad */
+}
+
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: linear-gradient(45deg, #ff0080, #00ff80, #8000ff, #ff8000);
+    background-size: 400% 400%;
+    animation: rainbow-bg 2s ease-in-out infinite alternate;
+    margin: 0;
+    overflow-x: auto; /* Allow horizontal scroll */
+}
+
+@keyframes rainbow-bg {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+/* Nightmare Header */
+.nightmare-header {
+    background: radial-gradient(circle, #ff0000, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff);
+    padding: 2rem;
+    text-align: center;
+    border: 10px solid gold;
+    box-shadow: 0 0 50px red, inset 0 0 50px blue;
+}
+
+.rainbow-text {
+    font-size: 4rem;
+    background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: rainbow-slide 1s linear infinite;
+    text-shadow: 5px 5px 0px black, 10px 10px 0px red, 15px 15px 0px yellow;
+}
+
+@keyframes rainbow-slide {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+.spinning-text {
+    animation: spin 2s linear infinite;
+    font-size: 1.5rem;
+    color: magenta;
+    text-decoration: blink; /* Old CSS property */
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.back-link {
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    animation: bounce 1s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-30px); }
+    60% { transform: translateY(-15px); }
+}
+
+/* Chaos Main */
+.chaos-main {
+    padding: 2rem;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(255,255,255,0.1) 10px,
+        rgba(255,255,255,0.1) 20px
+    );
+}
+
+/* Bad Sections */
+.bad-section {
+    margin: 3rem 0;
+    padding: 2rem;
+    border: 5px dashed red;
+    background: rgba(255, 255, 0, 0.3);
+    position: relative;
+}
+
+.bad-section::before {
+    content: "⚠️ TERRIBLE CSS AHEAD ⚠️";
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: red;
+    color: white;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+/* Typography Crimes */
+.comic-sans-section {
+    font-family: 'Comic Sans MS', cursive;
+}
+
+.terrible-heading {
+    font-size: 3rem;
+    color: lime;
+    text-shadow: 5px 5px red, 10px 10px blue, 15px 15px yellow;
+    font-weight: 900;
+    letter-spacing: 10px;
+}
+
+.unreadable-text {
+    font-size: 2rem;
+    color: red;
+    background: yellow;
+    font-weight: bold;
+    letter-spacing: 3px;
+    word-spacing: 10px;
+}
+
+.tiny-text {
+    font-size: 6px;
+    color: gray;
+    background: lightgray;
+}
+
+.stretched-text {
+    letter-spacing: 20px;
+    word-spacing: 50px;
+    font-size: 1.5rem;
+    color: purple;
+}
+
+.shadow-hell {
+    text-shadow: 
+        1px 1px 0px red,
+        2px 2px 0px orange,
+        3px 3px 0px yellow,
+        4px 4px 0px green,
+        5px 5px 0px blue,
+        6px 6px 0px indigo,
+        7px 7px 0px violet,
+        8px 8px 0px black,
+        9px 9px 0px red,
+        10px 10px 0px orange;
+    font-size: 2rem;
+    color: white;
+}
+
+/* Color Hell */
+.color-hell {
+    background: linear-gradient(90deg, red, yellow, green, cyan, blue, magenta);
+}
+
+.blinking-header {
+    animation: blink 0.5s linear infinite;
+    font-size: 2.5rem;
+    color: white;
+    background: black;
+    padding: 1rem;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+.eye-pain-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.neon-green-red {
+    background: red;
+    color: lime;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+.yellow-orange {
+    background: orange;
+    color: yellow;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+.blue-purple {
+    background: purple;
+    color: blue;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+.white-yellow {
+    background: yellow;
+    color: white;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+/* Layout Disasters */
+.floating-header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: red;
+    color: white;
+    padding: 1rem;
+    z-index: 1000;
+}
+
+.broken-layout {
+    position: relative;
+    height: 200px;
+    background: lightblue;
+}
+
+.overlapping-box {
+    position: absolute;
+    width: 150px;
+    height: 100px;
+    color: white;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+.box1 {
+    background: red;
+    top: 20px;
+    left: 20px;
+    z-index: 3;
+}
+
+.box2 {
+    background: blue;
+    top: 60px;
+    left: 80px;
+    z-index: 2;
+}
+
+.box3 {
+    background: green;
+    top: 100px;
+    left: 140px;
+    z-index: 1;
+}
+
+.horizontal-scroll-hell {
+    width: 2000px;
+    background: linear-gradient(to right, red, orange, yellow, green, blue, purple);
+    padding: 1rem;
+    margin: 1rem 0;
+    color: white;
+    font-weight: bold;
+}
+
+/* Animation Abuse */
+.shake-header {
+    animation: shake 0.5s ease-in-out infinite;
+    font-size: 2rem;
+    color: red;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.moving-madness {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 0;
+}
+
+.spin-forever {
+    animation: spin 1s linear infinite;
+    background: red;
+    color: white;
+    padding: 1rem;
+    border-radius: 50%;
+}
+
+.bounce-crazy {
+    animation: bounce-wild 0.3s ease-in-out infinite;
+    background: blue;
+    color: white;
+    padding: 1rem;
+}
+
+@keyframes bounce-wild {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-50px); }
+}
+
+.pulse-seizure {
+    animation: pulse-fast 0.1s ease-in-out infinite;
+    background: yellow;
+    color: black;
+    padding: 1rem;
+}
+
+@keyframes pulse-fast {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+}
+
+.slide-maniac {
+    animation: slide-crazy 1s ease-in-out infinite;
+    background: green;
+    color: white;
+    padding: 1rem;
+}
+
+@keyframes slide-crazy {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(100px); }
+    75% { transform: translateX(-100px); }
+}
+
+/* Horrible Hovers */
+.bad-hovers {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+}
+
+.disappear-btn {
+    background: blue;
+    color: white;
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.disappear-btn:hover {
+    opacity: 0;
+}
+
+.flip-btn {
+    background: red;
+    color: white;
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.flip-btn:hover {
+    transform: rotateX(180deg);
+}
+
+.color-seizure {
+    background: green;
+    color: white;
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.color-seizure:hover {
+    animation: color-flash 0.1s linear infinite;
+}
+
+@keyframes color-flash {
+    0% { background: red; }
+    20% { background: orange; }
+    40% { background: yellow; }
+    60% { background: green; }
+    80% { background: blue; }
+    100% { background: purple; }
+}
+
+.explode-text {
+    background: purple;
+    color: white;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.explode-text:hover {
+    transform: scale(3) rotate(720deg);
+    background: red;
+    position: relative;
+    z-index: 1000;
+}
+
+/* Positioning Hell */
+.fixed-annoyance {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    background: red;
+    color: white;
+    padding: 1rem;
+    z-index: 1000;
+    transform: rotate(-90deg);
+}
+
+.absolute-mess {
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    background: yellow;
+    color: red;
+    padding: 1rem;
+    transform: rotate(45deg);
+    z-index: 500;
+}
+
+.sticky-nightmare {
+    position: sticky;
+    top: 0;
+    background: lime;
+    color: black;
+    padding: 1rem;
+    margin: 1rem 0;
+    font-weight: bold;
+}
+
+/* Border Madness */
+.overdecorated-box {
+    border: 10px solid red;
+    border-style: dotted dashed wavy double;
+    box-shadow: 
+        0 0 10px red,
+        0 0 20px orange,
+        0 0 30px yellow,
+        0 0 40px green,
+        inset 0 0 10px blue,
+        inset 0 0 20px purple;
+    background: linear-gradient(45deg, 
+        transparent 25%, 
+        rgba(255,0,0,0.5) 25%, 
+        rgba(255,0,0,0.5) 50%, 
+        transparent 50%, 
+        transparent 75%, 
+        rgba(0,255,0,0.5) 75%);
+    padding: 2rem;
+    margin: 2rem 0;
+    transform: skew(-5deg, 2deg);
+    outline: 5px dotted blue;
+    outline-offset: 10px;
+}
+
+/* Mobile Nightmare */
+.mobile-nightmare {
+    overflow-x: auto;
+}
+
+.fixed-width-hell {
+    width: 1200px;
+    background: linear-gradient(to right, red, blue);
+    color: white;
+    padding: 1rem;
+}
+
+.tiny-table {
+    font-size: 8px;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.tiny-table td {
+    border: 1px solid black;
+    padding: 2px;
+    background: yellow;
+    white-space: nowrap;
+}
+
+/* Nightmare Footer */
+.nightmare-footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    border-top: 10px solid gold;
+    box-shadow: 0 -10px 20px red;
+}
+
+.footer-text {
+    font-size: 1.5rem;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.footer-warning {
+    color: red;
+    font-weight: bold;
+    font-size: 1.2rem;
+    animation: shake 1s ease-in-out infinite;
+}
+
+/* Extra horrible responsive behavior */
+@media (max-width: 768px) {
+    /* Make it even worse on mobile */
+    .terrible-heading {
+        font-size: 4rem; /* Way too big for mobile */
+    }
+    
+    .horizontal-scroll-hell {
+        width: 3000px; /* Even worse horizontal scroll */
+    }
+    
+    body {
+        font-size: 6px; /* Unreadably small */
+    }
+}

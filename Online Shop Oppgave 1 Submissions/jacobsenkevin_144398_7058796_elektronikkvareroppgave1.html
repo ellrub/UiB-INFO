@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Varer</title>
+<style>
+table { 
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 40%;
+}
+td, th {
+  border: 1px solid #000000;
+  text-align: center;
+  padding: 8px;
+}
+img {
+    width: 100px
+    }
+.overskrift {
+    text-align: center;
+}
+</style>
+</head>
+<body>
+<div class = "overskrift">
+<h1>
+    Scamotronics© Elektronikk
+</h1>
+<button onclick=""><a href="indexoppgave1.html">Trykk her for å gå tilbake til startsiden!</a></button>
+<button onclick=""><a href="diversevareroppgave1.html">Diverse</a></button>
+<button onclick=""><a href="sjeldnemynteroppgave1.html">Sjeldne mynter</a></button>
+<br>
+<h2>Sjekk ut våre fantastiske varer! Kun en av varene hver!</h2>
+</div>
+<br>
+<div class = "elektronikk">
+    <h2>Elektronikk</h2>
+    <table>
+        <tr>
+            <th>Vare</th>
+            <th>Pris</th>
+            <th>Illustrasjon</th>
+            <th>Kjøp</th>
+        </tr>
+        <tr>
+            <td>Datamaskin</td>
+            <td>30000 kr</td>
+            <td><img src ="https://www.netonnet.no/GetFile/ProductImage/gaming/gaming-pc/stasjonar-gaming-pc/netonnet-pc-360_n0sc0p3_v4(1034874)_680935_3_Normal_Large-1.webp" alt="gaming pc"></td>
+            <td><button id = "datamaskin" class="kjøp-knapp">Kjøp</button></td>
+        </tr>
+        <tr>
+            <td>Mobiltelefon</td>
+            <td>60000 kr</td>
+            <td><img src ="https://media.power-cdn.net/images/h-e50f1af75f63f07f69468bcf0cf95190/products/3596423/3596423_8_600x600_t_g.webp" alt="doro mobiltelefon"></td>
+            <td><button id = "mobiltelefon" class="kjøp-knapp">Kjøp</button></td>
+        </tr>
+        <tr>
+            <td>Gaming skjerm</td>
+            <td>15000 kr</td>
+            <td><img src ="https://m.media-amazon.com/images/I/71PqY4-jbHL._UF894,1000_QL80_.jpg" alt="gaming skjerm"></td>
+            <td><button id = "gaming-skjerm" class="kjøp-knapp">Kjøp</button></td>
+        </tr>
+        <tr>
+            <td>Datamus</td>
+            <td>5000 kr</td>
+            <td><img src = "https://cdn.estore.no/108604-large_default/vertikal-datamus---ergonomisk---tradl-s.jpg" alt="datamus"></td>
+            <td><button id = "datamus" class="kjøp-knapp">Kjøp</button></td>
+        </tr>
+    </table>
+</div>
+<script src = "handlekurv.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 300px){
+    display: none;
+}
+}
+
+.parent {
+    border: 1px solid red;
+
+    .child {
+        border: 1px solid blue;
+
+        .ntchild {
+            border: 5px solid green;
+            height: 50px;
+        }
+    }
+
+    div {
+        border: 1px solid black;
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+    
+    }
+}
+
+div {
+    display: flex;
+    flex-direction: row;
+    justify-content: ;
+    align-items:
+
+    h3 {
+        margin: 10px 20px;
+        border: 1px solid black;
+        padding: 10px 20px;
+    
+        &:hover {
+    
+        }
+    }
+}
+
+
+h3:hover {
+
+}
+
+#sdfgas {
+
+}
+
+.dfsgas {
+
+}
+tag {
+    
+}
