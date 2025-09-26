@@ -4,8 +4,6 @@ Pass på indentation slik at det er lesbart for framtidige deg, og andre
 
 KILDER
 
-Første html side skal hete index
-
 Keep it DRY
 
 Bruk <title> til å sette navn på nettstedet, ikke selve siden
@@ -25,3 +23,5 @@ Button skal ikke brukes til linker
 Oppbygging med tags - Header, Main, Section, Footer. Viktig for accessibility
 
 Ikke bruk inline css, <style> og css fil sammen.  
+
+Filnavigering
