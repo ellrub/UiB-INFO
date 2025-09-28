@@ -1,0 +1,493 @@
+.floating-dot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #222;
+    border-radius: 50%;
+    box-shadow: 
+        0 0 20px rgba(0, 0, 0, 0.9),
+        0 0 40px rgba(0, 0, 0, 0.7),
+        0 0 60px rgba(0, 0, 0, 0.5),
+        0 0 80px rgba(0, 0, 0, 0.3);
+    animation: floatDot3 10s ease-in-out infinite;
+    animation-delay: -4s;
+    top: 40%;
+    left: 80%;
+
+    &:nth-child(3) { 
+    animation: floatDot4 7s ease-in-out infinite;
+    animation-delay: -1s;
+    width: 7px;
+    height: 7px;
+    top: 20%;
+    left: 30%;
+    }
+
+    &:nth-child(4) { 
+        animation: floatDot5 9s ease-in-out infinite;
+        animation-delay: -3s;
+        width: 12px;
+        height: 12px;
+        top: 60%;
+        left: 70%;
+    }
+
+    &:nth-child(5) { 
+        animation: floatDot6 11s ease-in-out infinite;
+        animation-delay: -5s;
+        width: 5px;
+        height: 5px;
+        top: 10%;
+        left: 80%;
+    }
+
+    &:nth-child(6) { 
+        animation: floatDot7 8s ease-in-out infinite;
+        animation-delay: -2.5s;
+        width: 9px;
+        height: 9px;
+        top: 80%;
+        left: 20%;
+    }
+
+    &:nth-child(7) { 
+        animation: floatDot8 12s ease-in-out infinite;
+        animation-delay: -6s;
+        width: 6px;
+        height: 6px;
+        top: 40%;
+        left: 90%;
+    }
+
+    &:nth-child(8) { 
+        animation: floatDot9 7.5s ease-in-out infinite;
+        animation-delay: -1.5s;
+        width: 11px;
+        height: 11px;
+        top: 70%;
+        left: 10%;
+    }
+
+    &:nth-child(9) { 
+        animation: floatDot10 13s ease-in-out infinite;
+        animation-delay: -7s;
+        width: 8px;
+        height: 8px;
+        top: 15%;
+        left: 50%;
+    }
+
+    &:nth-child(10) {
+        animation: floatDot11 6.5s ease-in-out infinite;
+        animation-delay: -0.5s;
+        width: 4px;
+        height: 4px;
+        top: 90%;
+        left: 60%;
+    }
+
+    &:nth-child(11) {
+        animation: floatDot12 14s ease-in-out infinite;
+        animation-delay: -8s;
+        width: 13px;
+        height: 13px;
+        top: 30%;
+        left: 15%;
+    }
+
+    &:nth-child(12) {
+        animation: floatDot13 9.5s ease-in-out infinite;
+        animation-delay: -3.5s;
+        width: 7px;
+        height: 7px;
+        top: 55%;
+        left: 85%;
+    }
+
+    &:nth-child(13) {
+        animation: floatDot14 15s ease-in-out infinite;
+        animation-delay: -9s;
+        width: 10px;
+        height: 10px;
+        top: 75%;
+        left: 40%;
+    }
+
+    &:nth-child(14) {
+        animation: floatDot15 8.5s ease-in-out infinite;
+        animation-delay: -2.8s;
+        width: 6px;
+        height: 6px;
+        top: 25%;
+        left: 75%;
+    }
+
+    &:nth-child(15) {
+        animation: floatDot16 11.5s ease-in-out infinite;
+        animation-delay: -5.5s;
+        width: 9px;
+        height: 9px;
+        top: 85%;
+        left: 35%;
+    }
+
+    &:nth-child(16) {
+        animation: floatDot17 7.8s ease-in-out infinite;
+        animation-delay: -1.8s;
+        width: 5px;
+        height: 5px;
+        top: 5%;
+        left: 25%;
+    }
+
+    &:nth-child(17) {
+        animation: floatDot18 12.5s ease-in-out infinite;
+        animation-delay: -6.5s;
+        width: 8px;
+        height: 8px;
+        top: 45%;
+        left: 65%;
+    }
+
+    &:nth-child(18) {
+        animation: floatDot19 10.5s ease-in-out infinite;
+        animation-delay: -4.5s;
+        width: 11px;
+        height: 11px;
+        top: 65%;
+        left: 55%;
+    }
+
+    &:nth-child(19) {
+        animation: floatDot20 9.8s ease-in-out infinite;
+        animation-delay: -3.8s;
+        width: 7px;
+        height: 7px;
+        top: 35%;
+        left: 95%;
+    }
+
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes floatDot1 {
+    0%, 100% { 
+        transform: translate(5%, 10%) scale(1);
+        opacity: 0.8;
+    }
+    25% { 
+        transform: translate(85%, 75%) scale(1.2);
+        opacity: 0.6;
+    }
+    50% { 
+        transform: translate(20%, 90%) scale(0.8);
+        opacity: 0.9;
+    }
+    75% { 
+        transform: translate(70%, 25%) scale(1.1);
+        opacity: 0.7;
+    }
+}
+
+@keyframes floatDot2 {
+    0%, 100% { 
+        transform: translate(90%, 15%) scale(0.9);
+        opacity: 0.7;
+    }
+    33% { 
+        transform: translate(10%, 85%) scale(1.3);
+        opacity: 0.5;
+    }
+    66% { 
+        transform: translate(75%, 60%) scale(0.7);
+        opacity: 0.8;
+    }
+}
+
+@keyframes floatDot3 {
+    0%, 100% { 
+        transform: translate(35%, 35%) scale(1);
+        opacity: 0.9;
+    }
+    20% { 
+        transform: translate(95%, 5%) scale(0.6);
+        opacity: 0.4;
+    }
+    40% { 
+        transform: translate(5%, 95%) scale(1.4);
+        opacity: 0.8;
+    }
+    60% { 
+        transform: translate(80%, 80%) scale(0.9);
+        opacity: 0.6;
+    }
+    80% { 
+        transform: translate(60%, 20%) scale(1.2);
+        opacity: 0.7;
+    }
+}
+
+@keyframes floatDot4 {
+    0%, 100% {
+        transform: translate(25%, 70%) scale(0.8);
+        opacity: 0.6;
+    }
+    50% {
+        transform: translate(85%, 15%) scale(1.3);
+        opacity: 0.9;
+    }
+}
+
+@keyframes floatDot5 {
+    0%, 100% {
+        transform: translate(90%, 30%) scale(1.1);
+        opacity: 0.7; 
+    }
+    30% {
+        transform: translate(15%, 90%) scale(0.7);
+        opacity: 0.5; 
+    }
+    70% {
+        transform: translate(75%, 10%) scale(1.4);
+        opacity: 0.8; 
+    }
+}
+
+@keyframes floatDot6 {
+    0%, 100% {
+        transform: translate(45%, 10%) scale(0.9);
+        opacity: 0.8; 
+    }
+    25% {
+        transform: translate(95%, 70%) scale(1.2);
+        opacity: 0.4; 
+    }
+    75% {
+        transform: translate(10%, 85%) scale(0.6);
+        opacity: 0.9; 
+    }
+}
+
+@keyframes floatDot7 {
+    0%, 100% {
+        transform: translate(70%, 65%) scale(1.3);
+        opacity: 0.5; 
+    }
+    40% {
+        transform: translate(20%, 20%) scale(0.8);
+        opacity: 0.7; 
+    }
+    80% {
+        transform: translate(90%, 95%) scale(1.1);
+        opacity: 0.6; 
+    }
+}
+
+@keyframes floatDot8 {
+    0%, 100% {
+        transform: translate(20%, 45%) scale(0.7);
+        opacity: 0.9; 
+    }
+    33% {
+        transform: translate(80%, 5%) scale(1.5);
+        opacity: 0.4; 
+    }
+    66% {
+        transform: translate(60%, 90%) scale(0.9);
+        opacity: 0.7; 
+    }
+}
+
+@keyframes floatDot9 {
+    0%, 100% {
+        transform: translate(85%, 35%) scale(1.2);
+        opacity: 0.6; 
+    }
+    50% {
+        transform: translate(25%, 85%) scale(0.5);
+        opacity: 0.8; 
+    }
+}
+
+@keyframes floatDot10 {
+    0%, 100% {
+        transform: translate(30%, 20%) scale(0.6);
+        opacity: 0.7; 
+    }
+    20% {
+        transform: translate(85%, 85%) scale(1.4);
+        opacity: 0.5; 
+    }
+    60% {
+        transform: translate(10%, 60%) scale(0.9);
+        opacity: 0.9; 
+    }
+    90% {
+        transform: translate(95%, 10%) scale(1.1);
+        opacity: 0.6; 
+    }
+}
+
+@keyframes floatDot11 {
+    0%, 100% {
+        transform: translate(65%, 85%) scale(1.0);
+        opacity: 0.8; 
+    }
+    35% {
+        transform: translate(5%, 25%) scale(0.7);
+        opacity: 0.4; 
+    }
+    65% {
+        transform: translate(90%, 5%) scale(1.3);
+        opacity: 0.7; 
+    }
+}
+
+@keyframes floatDot12 {
+    0%, 100% {
+        transform: translate(95%, 60%) scale(0.8);
+        opacity: 0.5; 
+    }
+    25% {
+        transform: translate(40%, 25%) scale(1.2);
+        opacity: 0.8; 
+    }
+    50% {
+        transform: translate(10%, 95%) scale(0.6);
+        opacity: 0.6; 
+    }
+    75% {
+        transform: translate(80%, 5%) scale(1.4);
+        opacity: 0.9; 
+    }
+}
+
+@keyframes floatDot13 {
+    0%, 100% {
+        transform: translate(40%, 25%) scale(1.1);
+        opacity: 0.7; 
+    }
+    40% {
+        transform: translate(95%, 90%) scale(0.7);
+        opacity: 0.5; 
+    }
+    80% {
+        transform: translate(15%, 70%) scale(1.3);
+        opacity: 0.8; 
+    }
+}
+
+@keyframes floatDot14 {
+    0%, 100% {
+        transform: translate(75%, 90%) scale(0.9);
+        opacity: 0.6; 
+    }
+    30% {
+        transform: translate(25%, 10%) scale(1.1);
+        opacity: 0.9; 
+    }
+    70% {
+        transform: translate(90%, 50%) scale(0.8);
+        opacity: 0.4; 
+    }
+}
+
+@keyframes floatDot15 {
+    0%, 100% {
+        transform: translate(25%, 65%) scale(1.2);
+        opacity: 0.8; 
+    }
+    50% {
+        transform: translate(85%, 15%) scale(0.6);
+        opacity: 0.6; 
+    }
+}
+
+@keyframes floatDot16 {
+    0%, 100% {
+        transform: translate(55%, 20%) scale(0.8);
+        opacity: 0.7; 
+    }
+    25% {
+        transform: translate(5%, 80%) scale(1.3);
+        opacity: 0.5; 
+    }
+    75% {
+        transform: translate(90%, 90%) scale(0.9);
+        opacity: 0.8; 
+    }
+}
+
+@keyframes floatDot17 {
+    0%, 100% {
+        transform: translate(90%, 50%) scale(1.0);
+        opacity: 0.6; 
+    }
+    33% {
+        transform: translate(30%, 95%) scale(0.7);
+        opacity: 0.9; 
+    }
+    66% {
+        transform: translate(75%, 15%) scale(1.4);
+        opacity: 0.4; 
+    }
+}
+
+@keyframes floatDot18 {
+    0%, 100% {
+        transform: translate(20%, 35%) scale(1.3);
+        opacity: 0.5; 
+    }
+    20% {
+        transform: translate(95%, 80%) scale(0.6);
+        opacity: 0.8; 
+    }
+    60% {
+        transform: translate(45%, 95%) scale(1.1);
+        opacity: 0.7; 
+    }
+    90% {
+        transform: translate(85%, 5%) scale(0.8);
+        opacity: 0.6; 
+    }
+}
+
+@keyframes floatDot19 {
+    0%, 100% {
+        transform: translate(70%, 55%) scale(0.9);
+        opacity: 0.8; 
+    }
+    40% {
+        transform: translate(15%, 15%) scale(1.2);
+        opacity: 0.5; 
+    }
+    80% {
+        transform: translate(95%, 85%) scale(0.7);
+        opacity: 0.9; 
+    }
+}
+
+@keyframes floatDot20 {
+    0%, 100% {
+        transform: translate(45%, 75%) scale(1.1);
+        opacity: 0.6; 
+    }
+    30% {
+        transform: translate(95%, 20%) scale(0.8);
+        opacity: 0.7; 
+    }
+    70% {
+        transform: translate(10%, 90%) scale(1.3);
+        opacity: 0.4; 
+    }
+}
