@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+
+    li {
+        margin: 10px;
+        border:1px solid black; 
+        padding: 5px 10px;
+        list-style: none;
+        
+
+        &:hover {
+            background-color: aqua;
+            cursor: pointer;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-family: ;
+        }
+    }
+
+}
+
+h1 {
+    @media screen and (min-width: 400px) {
+        font-size: 5rem;
+        
+    }
+}

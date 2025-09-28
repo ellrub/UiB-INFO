@@ -6,8 +6,6 @@ KILDER
 
 Keep it DRY
 
-Bruk <title> til å sette navn på nettstedet, ikke selve siden
-
 Bruk beskrivende klasser
 
 Indentation
