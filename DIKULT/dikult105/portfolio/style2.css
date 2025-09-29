@@ -93,7 +93,7 @@ header {
         .header__project-whitespace,
         .header__project-snapshot,
         .header__project-insanity {
-            display: none;
+
             position: relative;
             overflow: hidden;
             justify-content: center;
