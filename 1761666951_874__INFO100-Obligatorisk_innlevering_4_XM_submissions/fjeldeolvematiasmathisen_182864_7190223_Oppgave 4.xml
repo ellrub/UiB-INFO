@@ -1,0 +1,20 @@
+<!--Oppgave 1a)-->
+<Spørsmål>
+    <ID>100</ID>
+    <Forfatter>Olve</Forfatter>
+    <Spørsmålstekst>Hva koster en PC?</Spørsmålstekst>
+</Spørsmål>
+
+<!--Oppgave 1b)-->
+<Person>
+    <ID>1</ID>
+    <Navn>Olve Matias Mahisen Fjelde</Navn>
+    <Institutt>UIB</Institutt>
+</Person>
+
+<!--Oppgave 1c)-->
+<Respons>
+    <Forfatter>Olve</Forfatter>
+    <Spørsmålstekst>Hva koster en PC?</Spørsmålstekst>
+    <Svartekst>15 kroner</Svartekst>
+</Respons>

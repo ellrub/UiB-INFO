@@ -1,0 +1,21 @@
+1a)
+<?xml version="1.0" encoding="UTF-8"?>
+<question id="23">
+    <author>J.K Rowling</author>
+    <text>When will the HBO reboot series be released?</text>
+</question>
+
+1b)
+<?xml version="1.0" encoding="UTF-8"?>
+<person id="101">
+    <fullname>Mark Mylod</fullname>
+    <affiliation>HBO Entertainment</affiliation>
+</person>
+
+1c)
+<?xml version="1.0" encoding="UTF-8"?>
+<answer id="45">
+    <author>J.K Rowling</author>
+    <questionID>23</questionID>
+    <text>The Harry Potter HBO reboot is scheduled to be released in 2027.</text>
+</answer>
